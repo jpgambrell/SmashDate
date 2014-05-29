@@ -22,6 +22,9 @@
 		C9DF9B9119368E9D0007C996 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7519368E9D0007C996 /* CoreData.framework */; };
 		C9DF9B9919368E9D0007C996 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9DF9B9719368E9D0007C996 /* InfoPlist.strings */; };
 		C9DF9B9B19368E9D0007C996 /* SmashDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9B9A19368E9D0007C996 /* SmashDateTests.m */; };
+		C9DF9BA7193787580007C996 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9BA6193787580007C996 /* FXForms.m */; };
+		C9DF9BAA193789FC0007C996 /* JGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9BA9193789FC0007C996 /* JGViewController.m */; };
+		C9DF9BAD19378AE40007C996 /* DateContactForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9BAC19378AE40007C996 /* DateContactForm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		C9DF9B9619368E9D0007C996 /* SmashDateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmashDateTests-Info.plist"; sourceTree = "<group>"; };
 		C9DF9B9819368E9D0007C996 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9DF9B9A19368E9D0007C996 /* SmashDateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmashDateTests.m; sourceTree = "<group>"; };
+		C9DF9BA5193787580007C996 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
+		C9DF9BA6193787580007C996 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
+		C9DF9BA8193789FC0007C996 /* JGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGViewController.h; sourceTree = "<group>"; };
+		C9DF9BA9193789FC0007C996 /* JGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGViewController.m; sourceTree = "<group>"; };
+		C9DF9BAB19378AE40007C996 /* DateContactForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateContactForm.h; sourceTree = "<group>"; };
+		C9DF9BAC19378AE40007C996 /* DateContactForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateContactForm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +124,16 @@
 		C9DF9B7719368E9D0007C996 /* SmashDate */ = {
 			isa = PBXGroup;
 			children = (
+				C9DF9BA4193787580007C996 /* FXForms */,
 				C9DF9B8019368E9D0007C996 /* JGAppDelegate.h */,
 				C9DF9B8119368E9D0007C996 /* JGAppDelegate.m */,
 				C9DF9B8619368E9D0007C996 /* Images.xcassets */,
 				C9DF9B8319368E9D0007C996 /* SmashDate.xcdatamodeld */,
 				C9DF9B7819368E9D0007C996 /* Supporting Files */,
+				C9DF9BA8193789FC0007C996 /* JGViewController.h */,
+				C9DF9BA9193789FC0007C996 /* JGViewController.m */,
+				C9DF9BAB19378AE40007C996 /* DateContactForm.h */,
+				C9DF9BAC19378AE40007C996 /* DateContactForm.m */,
 			);
 			path = SmashDate;
 			sourceTree = "<group>";
@@ -151,6 +165,15 @@
 				C9DF9B9719368E9D0007C996 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9DF9BA4193787580007C996 /* FXForms */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF9BA5193787580007C996 /* FXForms.h */,
+				C9DF9BA6193787580007C996 /* FXForms.m */,
+			);
+			path = FXForms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DF9B7E19368E9D0007C996 /* main.m in Sources */,
+				C9DF9BAA193789FC0007C996 /* JGViewController.m in Sources */,
+				C9DF9BAD19378AE40007C996 /* DateContactForm.m in Sources */,
+				C9DF9BA7193787580007C996 /* FXForms.m in Sources */,
 				C9DF9B8519368E9D0007C996 /* SmashDate.xcdatamodeld in Sources */,
 				C9DF9B8219368E9D0007C996 /* JGAppDelegate.m in Sources */,
 			);

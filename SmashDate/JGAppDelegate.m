@@ -7,6 +7,7 @@
 //
 
 #import "JGAppDelegate.h"
+#import "JGViewController.h"
 
 @implementation JGAppDelegate
 
@@ -19,6 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[JGViewController alloc] init]];
     [self.window makeKeyAndVisible];
     return YES;
 }
