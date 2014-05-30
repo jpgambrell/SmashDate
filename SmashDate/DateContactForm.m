@@ -16,12 +16,17 @@
 {
     return @[
              
-              @{FXFormFieldKey: @"name", FXFormFieldHeader: @"Date Contact Info"},
-              
+              @{FXFormFieldKey: @"name", FXFormFieldHeader: @"Details"},
+              @{FXFormFieldKey: @"address", FXFormFieldType: FXFormFieldTypeLongText},
+              @"email",
+              @"phone",
+             @{FXFormFieldKey: @"twitter", FXFormFieldHeader: @"Socal Media"},
+              @"facebook",
              
-             
-             
-             ]
+                @{FXFormFieldKey: @"birthday", FXFormFieldHeader: @"Additional Info"},
+              @"interests",
+              @{FXFormFieldKey: @"notes", FXFormFieldType: FXFormFieldTypeLongText},
+            ];
 }
 
 

@@ -13,11 +13,13 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, copy) NSString *email;
-@property (nonatomic, copy) NSString *twitterId;
-@property (nonatomic, copy) NSString *facebookId;
-@property (nonatomic, copy) NSString *birthday;
+@property (nonatomic, copy) NSString *twitter;
+@property (nonatomic, copy) NSString *facebook;
+@property (nonatomic, copy) NSDate *birthday;
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSArray *interests;
+@property (nonatomic, copy) NSString *notes;
 
 
 @end
