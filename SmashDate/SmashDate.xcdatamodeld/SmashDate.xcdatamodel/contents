@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DateActivity" representedClassName="DateActivity" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moneySpent" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dateEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DateEvent" inverseName="dateActivity" inverseEntity="DateEvent" syncable="YES"/>
+    </entity>
     <entity name="DateContact" representedClassName="DateContact" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
@@ -10,8 +17,18 @@
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dateEvent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateEvent" inverseName="dateContact" inverseEntity="DateEvent" syncable="YES"/>
+    </entity>
+    <entity name="DateEvent" representedClassName="DateEvent" syncable="YES">
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dateActivity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateActivity" inverseName="dateEvent" inverseEntity="DateActivity" syncable="YES"/>
+        <relationship name="dateContact" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateContact" inverseName="dateEvent" inverseEntity="DateContact" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DateContact" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="DateContact" positionX="-432" positionY="-9" width="128" height="193"/>
+        <element name="DateEvent" positionX="-245" positionY="-22" width="128" height="118"/>
+        <element name="DateActivity" positionX="-65" positionY="17" width="128" height="118"/>
     </elements>
 </model>

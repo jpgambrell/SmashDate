@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C99071A3193E431300C79961 /* DateContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C99071A2193E431300C79961 /* DateContact.m */; };
+		C99071A7193E770300C79961 /* DateActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C99071A6193E770300C79961 /* DateActivity.m */; };
+		C99071AA193E770300C79961 /* DateEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C99071A9193E770300C79961 /* DateEvent.m */; };
 		C9DF9B7019368E9D0007C996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B6F19368E9D0007C996 /* Foundation.framework */; };
 		C9DF9B7219368E9D0007C996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */; };
 		C9DF9B7419368E9D0007C996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7319368E9D0007C996 /* UIKit.framework */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		C99071A1193E431300C79961 /* DateContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateContact.h; sourceTree = "<group>"; };
 		C99071A2193E431300C79961 /* DateContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateContact.m; sourceTree = "<group>"; };
+		C99071A5193E770300C79961 /* DateActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateActivity.h; sourceTree = "<group>"; };
+		C99071A6193E770300C79961 /* DateActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateActivity.m; sourceTree = "<group>"; };
+		C99071A8193E770300C79961 /* DateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateEvent.h; sourceTree = "<group>"; };
+		C99071A9193E770300C79961 /* DateEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateEvent.m; sourceTree = "<group>"; };
 		C9DF9B6C19368E9D0007C996 /* SmashDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DF9B6F19368E9D0007C996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				C9DF9B8319368E9D0007C996 /* SmashDate.xcdatamodeld */,
+				C99071A8193E770300C79961 /* DateEvent.h */,
+				C99071A9193E770300C79961 /* DateEvent.m */,
+				C99071A5193E770300C79961 /* DateActivity.h */,
+				C99071A6193E770300C79961 /* DateActivity.m */,
 				C99071A1193E431300C79961 /* DateContact.h */,
 				C99071A2193E431300C79961 /* DateContact.m */,
 			);
@@ -287,8 +297,10 @@
 			files = (
 				C9DF9B7E19368E9D0007C996 /* main.m in Sources */,
 				C9DF9BAA193789FC0007C996 /* JGViewController.m in Sources */,
+				C99071AA193E770300C79961 /* DateEvent.m in Sources */,
 				C9DF9BAD19378AE40007C996 /* DateContactForm.m in Sources */,
 				C9DF9BA7193787580007C996 /* FXForms.m in Sources */,
+				C99071A7193E770300C79961 /* DateActivity.m in Sources */,
 				C99071A3193E431300C79961 /* DateContact.m in Sources */,
 				C9DF9B8519368E9D0007C996 /* SmashDate.xcdatamodeld in Sources */,
 				C9DF9B8219368E9D0007C996 /* JGAppDelegate.m in Sources */,
