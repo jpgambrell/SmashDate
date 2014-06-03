@@ -8,6 +8,8 @@
 
 #import "JGViewController.h"
 #import "DateContactForm.h"
+#import "DateContact.h"
+#import "JGAppDelegate.h"
 
 
 @interface JGViewController ()
@@ -28,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    JGAppDelegate *appDelegate = (JGAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = appDelegate.managedObjectContext;
     // Do any additional setup after loading the view.
 }
 
@@ -50,8 +54,32 @@
 #pragma mark FXForms Methods
 - (void)submitLoginForm
 {
+    DateContactForm * dcForm = self.formController.form;
+    
+    
+    
     //now we can display a form value in our alert
-    [[[UIAlertView alloc] initWithTitle:@"Login Form Submitted" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
-}
+    DateContact *newDateContact = [NSEntityDescription insertNewObjectForEntityForName:@"DateContact" inManagedObjectContext:self.managedObjectContext];
+    
+    newDateContact.name = dcForm.name;
+    newDateContact.birthday = dcForm.birthday;
+    newDateContact.email = dcForm.email;
+    newDateContact.facebook = dcForm.facebook;
+    newDateContact.interests = [[dcForm.interests valueForKey:@"description"] componentsJoinedByString:@""];
+    newDateContact.notes = dcForm.notes;
+    newDateContact.phone = dcForm.phone;
+    newDateContact.twitter = dcForm.twitter;
+    
+
+    
+    NSError *anyError = nil;
+    BOOL savedSuccessfully = [self.managedObjectContext save:&anyError];
+    if( !savedSuccessfully ) { /* do something with anyError */
+        NSLog(@"Error saving ");
+    
+    }   else {
+        [[[UIAlertView alloc] initWithTitle:@"Login Form Submitted" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];}
+
+    }
 
 @end

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "FXForms.h"
 
+
 @interface JGViewController : FXFormViewController
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
