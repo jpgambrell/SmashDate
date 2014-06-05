@@ -2,7 +2,7 @@
 //  DateEvent.m
 //  SmashDate
 //
-//  Created by Gambrell, John on 6/3/14.
+//  Created by Gambrell, John on 6/5/14.
 //  Copyright (c) 2014 Gambrell, John. All rights reserved.
 //
 
@@ -13,10 +13,11 @@
 
 @implementation DateEvent
 
-@dynamic title;
+@dynamic endDate;
+@dynamic notes;
 @dynamic startDate;
-@dynamic startTime;
-@dynamic dateContact;
+@dynamic title;
 @dynamic dateActivity;
+@dynamic dateContact;
 
 @end

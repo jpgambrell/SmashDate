@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C99071A3193E431300C79961 /* DateContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C99071A2193E431300C79961 /* DateContact.m */; };
-		C99071A7193E770300C79961 /* DateActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C99071A6193E770300C79961 /* DateActivity.m */; };
-		C99071AA193E770300C79961 /* DateEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C99071A9193E770300C79961 /* DateEvent.m */; };
+		C94C653E193FB9F30071963E /* JGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C653D193FB9F30071963E /* JGRootViewController.m */; };
+		C94C65851940CC270071963E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65841940CC270071963E /* HomeViewController.m */; };
+		C94C65881940CC460071963E /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65871940CC460071963E /* CalendarViewController.m */; };
+		C94C658D1941123A0071963E /* JGEventDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C658C1941123A0071963E /* JGEventDataStore.m */; };
+		C94C658F194112D70071963E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94C658E194112D70071963E /* EventKit.framework */; };
+		C94C6593194116F30071963E /* DateContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C6592194116F30071963E /* DateContact.m */; };
+		C94C6596194116F40071963E /* DateEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C6595194116F40071963E /* DateEvent.m */; };
+		C94C6599194116F40071963E /* DateActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C6598194116F40071963E /* DateActivity.m */; };
+		C99071AC193F9B9800C79961 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99071AB193F9B9800C79961 /* Storyboard.storyboard */; };
 		C9DF9B7019368E9D0007C996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B6F19368E9D0007C996 /* Foundation.framework */; };
 		C9DF9B7219368E9D0007C996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */; };
 		C9DF9B7419368E9D0007C996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7319368E9D0007C996 /* UIKit.framework */; };
@@ -26,7 +32,7 @@
 		C9DF9B9919368E9D0007C996 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9DF9B9719368E9D0007C996 /* InfoPlist.strings */; };
 		C9DF9B9B19368E9D0007C996 /* SmashDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9B9A19368E9D0007C996 /* SmashDateTests.m */; };
 		C9DF9BA7193787580007C996 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9BA6193787580007C996 /* FXForms.m */; };
-		C9DF9BAA193789FC0007C996 /* JGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9BA9193789FC0007C996 /* JGViewController.m */; };
+		C9DF9BAA193789FC0007C996 /* DateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9BA9193789FC0007C996 /* DateContactViewController.m */; };
 		C9DF9BAD19378AE40007C996 /* DateContactForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DF9BAC19378AE40007C996 /* DateContactForm.m */; };
 /* End PBXBuildFile section */
 
@@ -41,12 +47,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C99071A1193E431300C79961 /* DateContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateContact.h; sourceTree = "<group>"; };
-		C99071A2193E431300C79961 /* DateContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateContact.m; sourceTree = "<group>"; };
-		C99071A5193E770300C79961 /* DateActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateActivity.h; sourceTree = "<group>"; };
-		C99071A6193E770300C79961 /* DateActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateActivity.m; sourceTree = "<group>"; };
-		C99071A8193E770300C79961 /* DateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateEvent.h; sourceTree = "<group>"; };
-		C99071A9193E770300C79961 /* DateEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateEvent.m; sourceTree = "<group>"; };
+		C94C653C193FB9F30071963E /* JGRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGRootViewController.h; path = SmashDate/JGRootViewController.h; sourceTree = "<group>"; };
+		C94C653D193FB9F30071963E /* JGRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JGRootViewController.m; path = SmashDate/JGRootViewController.m; sourceTree = "<group>"; };
+		C94C65831940CC270071963E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C94C65841940CC270071963E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C94C65861940CC460071963E /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		C94C65871940CC460071963E /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		C94C658B1941123A0071963E /* JGEventDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGEventDataStore.h; path = ../JGEventDataStore.h; sourceTree = "<group>"; };
+		C94C658C1941123A0071963E /* JGEventDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JGEventDataStore.m; path = ../JGEventDataStore.m; sourceTree = "<group>"; };
+		C94C658E194112D70071963E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		C94C6590194116860071963E /* SmashDate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "SmashDate 2.xcdatamodel"; sourceTree = "<group>"; };
+		C94C6591194116F30071963E /* DateContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateContact.h; sourceTree = "<group>"; };
+		C94C6592194116F30071963E /* DateContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateContact.m; sourceTree = "<group>"; };
+		C94C6594194116F40071963E /* DateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateEvent.h; sourceTree = "<group>"; };
+		C94C6595194116F40071963E /* DateEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateEvent.m; sourceTree = "<group>"; };
+		C94C6597194116F40071963E /* DateActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateActivity.h; sourceTree = "<group>"; };
+		C94C6598194116F40071963E /* DateActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateActivity.m; sourceTree = "<group>"; };
+		C99071AB193F9B9800C79961 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		C9DF9B6C19368E9D0007C996 /* SmashDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DF9B6F19368E9D0007C996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,10 +84,10 @@
 		C9DF9B9A19368E9D0007C996 /* SmashDateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmashDateTests.m; sourceTree = "<group>"; };
 		C9DF9BA5193787580007C996 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
 		C9DF9BA6193787580007C996 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
-		C9DF9BA8193789FC0007C996 /* JGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGViewController.h; sourceTree = "<group>"; };
-		C9DF9BA9193789FC0007C996 /* JGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGViewController.m; sourceTree = "<group>"; };
-		C9DF9BAB19378AE40007C996 /* DateContactForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateContactForm.h; sourceTree = "<group>"; };
-		C9DF9BAC19378AE40007C996 /* DateContactForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateContactForm.m; sourceTree = "<group>"; };
+		C9DF9BA8193789FC0007C996 /* DateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateContactViewController.h; path = SmashDate/DateContactViewController.h; sourceTree = "<group>"; };
+		C9DF9BA9193789FC0007C996 /* DateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateContactViewController.m; path = SmashDate/DateContactViewController.m; sourceTree = "<group>"; };
+		C9DF9BAB19378AE40007C996 /* DateContactForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateContactForm.h; path = SmashDate/DateContactForm.h; sourceTree = "<group>"; };
+		C9DF9BAC19378AE40007C996 /* DateContactForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateContactForm.m; path = SmashDate/DateContactForm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94C658F194112D70071963E /* EventKit.framework in Frameworks */,
 				C9DF9B7219368E9D0007C996 /* CoreGraphics.framework in Frameworks */,
 				C9DF9B7619368E9D0007C996 /* CoreData.framework in Frameworks */,
 				C9DF9B7419368E9D0007C996 /* UIKit.framework in Frameworks */,
@@ -99,24 +117,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C94C6589194111760071963E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C94C653C193FB9F30071963E /* JGRootViewController.h */,
+				C94C653D193FB9F30071963E /* JGRootViewController.m */,
+				C99071AB193F9B9800C79961 /* Storyboard.storyboard */,
+				C94C65831940CC270071963E /* HomeViewController.h */,
+				C94C65841940CC270071963E /* HomeViewController.m */,
+				C9DF9BA8193789FC0007C996 /* DateContactViewController.h */,
+				C9DF9BA9193789FC0007C996 /* DateContactViewController.m */,
+				C94C65861940CC460071963E /* CalendarViewController.h */,
+				C94C65871940CC460071963E /* CalendarViewController.m */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C94C658A1941119E0071963E /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF9BAB19378AE40007C996 /* DateContactForm.h */,
+				C9DF9BAC19378AE40007C996 /* DateContactForm.m */,
+			);
+			name = Forms;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		C99071A4193E432000C79961 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
 				C9DF9B8319368E9D0007C996 /* SmashDate.xcdatamodeld */,
-				C99071A8193E770300C79961 /* DateEvent.h */,
-				C99071A9193E770300C79961 /* DateEvent.m */,
-				C99071A5193E770300C79961 /* DateActivity.h */,
-				C99071A6193E770300C79961 /* DateActivity.m */,
-				C99071A1193E431300C79961 /* DateContact.h */,
-				C99071A2193E431300C79961 /* DateContact.m */,
+				C94C6597194116F40071963E /* DateActivity.h */,
+				C94C6598194116F40071963E /* DateActivity.m */,
+				C94C6594194116F40071963E /* DateEvent.h */,
+				C94C6595194116F40071963E /* DateEvent.m */,
+				C94C6591194116F30071963E /* DateContact.h */,
+				C94C6592194116F30071963E /* DateContact.m */,
 			);
 			name = "Data Model";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C9DF9B6319368E9D0007C996 = {
 			isa = PBXGroup;
 			children = (
-				C99071A4193E432000C79961 /* Data Model */,
 				C9DF9B7719368E9D0007C996 /* SmashDate */,
 				C9DF9B9419368E9D0007C996 /* SmashDateTests */,
 				C9DF9B6E19368E9D0007C996 /* Frameworks */,
@@ -136,6 +181,7 @@
 		C9DF9B6E19368E9D0007C996 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C94C658E194112D70071963E /* EventKit.framework */,
 				C9DF9B6F19368E9D0007C996 /* Foundation.framework */,
 				C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */,
 				C9DF9B7319368E9D0007C996 /* UIKit.framework */,
@@ -148,15 +194,16 @@
 		C9DF9B7719368E9D0007C996 /* SmashDate */ = {
 			isa = PBXGroup;
 			children = (
+				C94C658B1941123A0071963E /* JGEventDataStore.h */,
+				C94C658C1941123A0071963E /* JGEventDataStore.m */,
+				C94C658A1941119E0071963E /* Forms */,
+				C99071A4193E432000C79961 /* Data Model */,
+				C94C6589194111760071963E /* Views */,
 				C9DF9BA4193787580007C996 /* FXForms */,
 				C9DF9B8019368E9D0007C996 /* JGAppDelegate.h */,
 				C9DF9B8119368E9D0007C996 /* JGAppDelegate.m */,
 				C9DF9B8619368E9D0007C996 /* Images.xcassets */,
 				C9DF9B7819368E9D0007C996 /* Supporting Files */,
-				C9DF9BA8193789FC0007C996 /* JGViewController.h */,
-				C9DF9BA9193789FC0007C996 /* JGViewController.m */,
-				C9DF9BAB19378AE40007C996 /* DateContactForm.h */,
-				C9DF9BAC19378AE40007C996 /* DateContactForm.m */,
 			);
 			path = SmashDate;
 			sourceTree = "<group>";
@@ -277,6 +324,7 @@
 			files = (
 				C9DF9B7C19368E9D0007C996 /* InfoPlist.strings in Resources */,
 				C9DF9B8719368E9D0007C996 /* Images.xcassets in Resources */,
+				C99071AC193F9B9800C79961 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +344,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DF9B7E19368E9D0007C996 /* main.m in Sources */,
-				C9DF9BAA193789FC0007C996 /* JGViewController.m in Sources */,
-				C99071AA193E770300C79961 /* DateEvent.m in Sources */,
+				C94C6593194116F30071963E /* DateContact.m in Sources */,
+				C9DF9BAA193789FC0007C996 /* DateContactViewController.m in Sources */,
 				C9DF9BAD19378AE40007C996 /* DateContactForm.m in Sources */,
+				C94C65881940CC460071963E /* CalendarViewController.m in Sources */,
+				C94C658D1941123A0071963E /* JGEventDataStore.m in Sources */,
 				C9DF9BA7193787580007C996 /* FXForms.m in Sources */,
-				C99071A7193E770300C79961 /* DateActivity.m in Sources */,
-				C99071A3193E431300C79961 /* DateContact.m in Sources */,
+				C94C65851940CC270071963E /* HomeViewController.m in Sources */,
+				C94C6596194116F40071963E /* DateEvent.m in Sources */,
 				C9DF9B8519368E9D0007C996 /* SmashDate.xcdatamodeld in Sources */,
+				C94C6599194116F40071963E /* DateActivity.m in Sources */,
 				C9DF9B8219368E9D0007C996 /* JGAppDelegate.m in Sources */,
+				C94C653E193FB9F30071963E /* JGRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +569,7 @@
 		C9DF9B8319368E9D0007C996 /* SmashDate.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				C94C6590194116860071963E /* SmashDate 2.xcdatamodel */,
 				C9DF9B8419368E9D0007C996 /* SmashDate.xcdatamodel */,
 			);
 			currentVersion = C9DF9B8419368E9D0007C996 /* SmashDate.xcdatamodel */;

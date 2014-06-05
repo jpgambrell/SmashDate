@@ -10,7 +10,7 @@
 #import "FXForms.h"
 
 
-@interface JGViewController : FXFormViewController
+@interface DateContactViewController : FXFormViewController
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end

@@ -6,26 +6,39 @@
 //  Copyright (c) 2014 Gambrell, John. All rights reserved.
 //
 
-#import "JGViewController.h"
+#import "DateContactViewController.h"
 #import "DateContactForm.h"
 #import "DateContact.h"
 #import "JGAppDelegate.h"
 
 
-@interface JGViewController ()
+@interface DateContactViewController ()
 
 @end
 
-@implementation JGViewController
+@implementation DateContactViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        self.formController.form = [[DateContactForm alloc]init];
+//    }
+//    return self;
+//}
+
+
+- (id)initWithCoder:(NSCoder*)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.formController.form = [[DateContactForm alloc]init];
+    if(self = [super initWithCoder:aDecoder])
+    {
+        if (self) {
+            self.formController.form = [[DateContactForm alloc]init];
+        }
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {

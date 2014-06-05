@@ -2,13 +2,14 @@
 //  DateContact.h
 //  SmashDate
 //
-//  Created by Gambrell, John on 6/3/14.
+//  Created by Gambrell, John on 6/5/14.
 //  Copyright (c) 2014 Gambrell, John. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class DateEvent;
 
 @interface DateContact : NSManagedObject
 
@@ -21,5 +22,14 @@
 @property (nonatomic, retain) NSString * notes;
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * twitter;
+@property (nonatomic, retain) NSSet *dateEvent;
+@end
+
+@interface DateContact (CoreDataGeneratedAccessors)
+
+- (void)addDateEventObject:(DateEvent *)value;
+- (void)removeDateEventObject:(DateEvent *)value;
+- (void)addDateEvent:(NSSet *)values;
+- (void)removeDateEvent:(NSSet *)values;
 
 @end
