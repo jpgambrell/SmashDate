@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01E6E5741942296D0038F076 /* date_from-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E6E5731942296D0038F076 /* date_from-75.png */; };
+		01E6E57719422A570038F076 /* date_from-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E6E57619422A570038F076 /* date_from-50.png */; };
+		01E6E579194230FE0038F076 /* calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E6E578194230FE0038F076 /* calendar-50.png */; };
 		C94C653E193FB9F30071963E /* JGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C653D193FB9F30071963E /* JGRootViewController.m */; };
 		C94C65851940CC270071963E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65841940CC270071963E /* HomeViewController.m */; };
 		C94C65881940CC460071963E /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65871940CC460071963E /* CalendarViewController.m */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01E6E5731942296D0038F076 /* date_from-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date_from-75.png"; sourceTree = "<group>"; };
+		01E6E57619422A570038F076 /* date_from-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date_from-50.png"; sourceTree = "<group>"; };
+		01E6E578194230FE0038F076 /* calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-50.png"; sourceTree = "<group>"; };
 		C94C653C193FB9F30071963E /* JGRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGRootViewController.h; path = SmashDate/JGRootViewController.h; sourceTree = "<group>"; };
 		C94C653D193FB9F30071963E /* JGRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JGRootViewController.m; path = SmashDate/JGRootViewController.m; sourceTree = "<group>"; };
 		C94C65831940CC270071963E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -117,6 +123,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01E6E575194229760038F076 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				01E6E57619422A570038F076 /* date_from-50.png */,
+				01E6E578194230FE0038F076 /* calendar-50.png */,
+				01E6E5731942296D0038F076 /* date_from-75.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		C94C6589194111760071963E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				C94C658B1941123A0071963E /* JGEventDataStore.h */,
+				01E6E575194229760038F076 /* images */,
 				C94C658C1941123A0071963E /* JGEventDataStore.m */,
 				C94C658A1941119E0071963E /* Forms */,
 				C99071A4193E432000C79961 /* Data Model */,
@@ -323,6 +340,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DF9B7C19368E9D0007C996 /* InfoPlist.strings in Resources */,
+				01E6E5741942296D0038F076 /* date_from-75.png in Resources */,
+				01E6E579194230FE0038F076 /* calendar-50.png in Resources */,
+				01E6E57719422A570038F076 /* date_from-50.png in Resources */,
 				C9DF9B8719368E9D0007C996 /* Images.xcassets in Resources */,
 				C99071AC193F9B9800C79961 /* Storyboard.storyboard in Resources */,
 			);
