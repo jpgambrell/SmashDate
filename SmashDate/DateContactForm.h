@@ -12,6 +12,7 @@
 @interface DateContactForm : NSObject<FXForm>
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *avatar;
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *twitter;
 @property (nonatomic, copy) NSString *facebook;
