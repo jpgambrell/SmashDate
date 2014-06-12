@@ -11,20 +11,19 @@
 		01E6E57719422A570038F076 /* date_from-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E6E57619422A570038F076 /* date_from-50.png */; };
 		01E6E579194230FE0038F076 /* calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E6E578194230FE0038F076 /* calendar-50.png */; };
 		C94C653E193FB9F30071963E /* JGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C653D193FB9F30071963E /* JGRootViewController.m */; };
-		C94C65851940CC270071963E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65841940CC270071963E /* HomeViewController.m */; };
-		C94C658D1941123A0071963E /* JGEventDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C658C1941123A0071963E /* JGEventDataStore.m */; };
 		C94C658F194112D70071963E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94C658E194112D70071963E /* EventKit.framework */; };
-		C94C6596194116F40071963E /* DateEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C6595194116F40071963E /* DateEvent.m */; };
-		C94C6599194116F40071963E /* DateActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C6598194116F40071963E /* DateActivity.m */; };
-		C94C659C194756890071963E /* CalendarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C659B194756890071963E /* CalendarTableViewController.m */; };
-		C94C659F19475A4B0071963E /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C659E19475A4B0071963E /* EventsTableViewCell.m */; };
-		C94C65A219477E6A0071963E /* EventDetailForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65A119477E6A0071963E /* EventDetailForm.m */; };
-		C94C65A5194781CC0071963E /* RootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65A4194781CC0071963E /* RootForm.m */; };
-		C94C65A9194782B70071963E /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65A8194782B70071963E /* EventDetailViewController.m */; };
-		C94C65AC19478D210071963E /* EventActivityForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65AB19478D210071963E /* EventActivityForm.m */; };
-		C94C65AF1948B3A00071963E /* DateContactPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65AE1948B3A00071963E /* DateContactPickerTableViewController.m */; };
-		C94C65B5194A3F010071963E /* DateContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65B4194A3F010071963E /* DateContact.m */; };
-		C99071AC193F9B9800C79961 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99071AB193F9B9800C79961 /* Storyboard.storyboard */; };
+		C94C65B8194A4C100071963E /* DateContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65B7194A4C100071963E /* DateContact.m */; };
+		C94C65BD194A4C270071963E /* DateActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65BA194A4C270071963E /* DateActivity.m */; };
+		C94C65BE194A4C270071963E /* DateEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65BC194A4C270071963E /* DateEvent.m */; };
+		C94C65C1194A4C370071963E /* CalendarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65C0194A4C370071963E /* CalendarTableViewController.m */; };
+		C94C65C3194A4C440071963E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94C65C2194A4C440071963E /* Storyboard.storyboard */; };
+		C94C65C6194A4C550071963E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65C5194A4C550071963E /* HomeViewController.m */; };
+		C94C65CD194A4C830071963E /* DateContactPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65C8194A4C830071963E /* DateContactPickerTableViewController.m */; };
+		C94C65CE194A4C830071963E /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65CA194A4C830071963E /* EventDetailViewController.m */; };
+		C94C65CF194A4C830071963E /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65CC194A4C830071963E /* EventsTableViewCell.m */; };
+		C94C65D2194A4CB20071963E /* EventDetailForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65D1194A4CB20071963E /* EventDetailForm.m */; };
+		C94C65D7194A4CC80071963E /* EventActivityForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65D4194A4CC80071963E /* EventActivityForm.m */; };
+		C94C65D8194A4CC80071963E /* RootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65D6194A4CC80071963E /* RootForm.m */; };
 		C9DF9B7019368E9D0007C996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B6F19368E9D0007C996 /* Foundation.framework */; };
 		C9DF9B7219368E9D0007C996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */; };
 		C9DF9B7419368E9D0007C996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7319368E9D0007C996 /* UIKit.framework */; };
@@ -61,33 +60,31 @@
 		01E6E578194230FE0038F076 /* calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-50.png"; sourceTree = "<group>"; };
 		C94C653C193FB9F30071963E /* JGRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGRootViewController.h; path = SmashDate/JGRootViewController.h; sourceTree = "<group>"; };
 		C94C653D193FB9F30071963E /* JGRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JGRootViewController.m; path = SmashDate/JGRootViewController.m; sourceTree = "<group>"; };
-		C94C65831940CC270071963E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		C94C65841940CC270071963E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		C94C658B1941123A0071963E /* JGEventDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGEventDataStore.h; path = ../JGEventDataStore.h; sourceTree = "<group>"; };
-		C94C658C1941123A0071963E /* JGEventDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JGEventDataStore.m; path = ../JGEventDataStore.m; sourceTree = "<group>"; };
 		C94C658E194112D70071963E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		C94C6590194116860071963E /* SmashDate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "SmashDate 2.xcdatamodel"; sourceTree = "<group>"; };
-		C94C6594194116F40071963E /* DateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateEvent.h; sourceTree = "<group>"; };
-		C94C6595194116F40071963E /* DateEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateEvent.m; sourceTree = "<group>"; };
-		C94C6597194116F40071963E /* DateActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateActivity.h; sourceTree = "<group>"; };
-		C94C6598194116F40071963E /* DateActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateActivity.m; sourceTree = "<group>"; };
-		C94C659A194756890071963E /* CalendarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarTableViewController.h; sourceTree = "<group>"; };
-		C94C659B194756890071963E /* CalendarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTableViewController.m; sourceTree = "<group>"; };
-		C94C659D19475A4A0071963E /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
-		C94C659E19475A4B0071963E /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
-		C94C65A019477E6A0071963E /* EventDetailForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailForm.h; sourceTree = "<group>"; };
-		C94C65A119477E6A0071963E /* EventDetailForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailForm.m; sourceTree = "<group>"; };
-		C94C65A3194781CC0071963E /* RootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootForm.h; sourceTree = "<group>"; };
-		C94C65A4194781CC0071963E /* RootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootForm.m; sourceTree = "<group>"; };
-		C94C65A7194782B70071963E /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
-		C94C65A8194782B70071963E /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
-		C94C65AA19478D210071963E /* EventActivityForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventActivityForm.h; sourceTree = "<group>"; };
-		C94C65AB19478D210071963E /* EventActivityForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventActivityForm.m; sourceTree = "<group>"; };
-		C94C65AD1948B3A00071963E /* DateContactPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateContactPickerTableViewController.h; sourceTree = "<group>"; };
-		C94C65AE1948B3A00071963E /* DateContactPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateContactPickerTableViewController.m; sourceTree = "<group>"; };
-		C94C65B3194A3F010071963E /* DateContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateContact.h; sourceTree = "<group>"; };
-		C94C65B4194A3F010071963E /* DateContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateContact.m; sourceTree = "<group>"; };
-		C99071AB193F9B9800C79961 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		C94C65B6194A4C100071963E /* DateContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateContact.h; path = SmashDate/DateContact.h; sourceTree = "<group>"; };
+		C94C65B7194A4C100071963E /* DateContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateContact.m; path = SmashDate/DateContact.m; sourceTree = "<group>"; };
+		C94C65B9194A4C270071963E /* DateActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateActivity.h; path = SmashDate/DateActivity.h; sourceTree = "<group>"; };
+		C94C65BA194A4C270071963E /* DateActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateActivity.m; path = SmashDate/DateActivity.m; sourceTree = "<group>"; };
+		C94C65BB194A4C270071963E /* DateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateEvent.h; path = SmashDate/DateEvent.h; sourceTree = "<group>"; };
+		C94C65BC194A4C270071963E /* DateEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateEvent.m; path = SmashDate/DateEvent.m; sourceTree = "<group>"; };
+		C94C65BF194A4C370071963E /* CalendarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarTableViewController.h; path = SmashDate/CalendarTableViewController.h; sourceTree = "<group>"; };
+		C94C65C0194A4C370071963E /* CalendarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarTableViewController.m; path = SmashDate/CalendarTableViewController.m; sourceTree = "<group>"; };
+		C94C65C2194A4C440071963E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = SmashDate/Storyboard.storyboard; sourceTree = "<group>"; };
+		C94C65C4194A4C550071963E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = SmashDate/HomeViewController.h; sourceTree = "<group>"; };
+		C94C65C5194A4C550071963E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = SmashDate/HomeViewController.m; sourceTree = "<group>"; };
+		C94C65C7194A4C830071963E /* DateContactPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateContactPickerTableViewController.h; path = SmashDate/DateContactPickerTableViewController.h; sourceTree = "<group>"; };
+		C94C65C8194A4C830071963E /* DateContactPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateContactPickerTableViewController.m; path = SmashDate/DateContactPickerTableViewController.m; sourceTree = "<group>"; };
+		C94C65C9194A4C830071963E /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDetailViewController.h; path = SmashDate/EventDetailViewController.h; sourceTree = "<group>"; };
+		C94C65CA194A4C830071963E /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventDetailViewController.m; path = SmashDate/EventDetailViewController.m; sourceTree = "<group>"; };
+		C94C65CB194A4C830071963E /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsTableViewCell.h; path = SmashDate/EventsTableViewCell.h; sourceTree = "<group>"; };
+		C94C65CC194A4C830071963E /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsTableViewCell.m; path = SmashDate/EventsTableViewCell.m; sourceTree = "<group>"; };
+		C94C65D0194A4CB20071963E /* EventDetailForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDetailForm.h; path = SmashDate/EventDetailForm.h; sourceTree = "<group>"; };
+		C94C65D1194A4CB20071963E /* EventDetailForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventDetailForm.m; path = SmashDate/EventDetailForm.m; sourceTree = "<group>"; };
+		C94C65D3194A4CC80071963E /* EventActivityForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventActivityForm.h; path = SmashDate/EventActivityForm.h; sourceTree = "<group>"; };
+		C94C65D4194A4CC80071963E /* EventActivityForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventActivityForm.m; path = SmashDate/EventActivityForm.m; sourceTree = "<group>"; };
+		C94C65D5194A4CC80071963E /* RootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootForm.h; path = SmashDate/RootForm.h; sourceTree = "<group>"; };
+		C94C65D6194A4CC80071963E /* RootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootForm.m; path = SmashDate/RootForm.m; sourceTree = "<group>"; };
 		C9DF9B6C19368E9D0007C996 /* SmashDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DF9B6F19368E9D0007C996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,20 +152,20 @@
 			isa = PBXGroup;
 			children = (
 				C94C653C193FB9F30071963E /* JGRootViewController.h */,
-				C94C659A194756890071963E /* CalendarTableViewController.h */,
-				C94C659B194756890071963E /* CalendarTableViewController.m */,
+				C94C65C7194A4C830071963E /* DateContactPickerTableViewController.h */,
+				C94C65C8194A4C830071963E /* DateContactPickerTableViewController.m */,
+				C94C65C9194A4C830071963E /* EventDetailViewController.h */,
+				C94C65CA194A4C830071963E /* EventDetailViewController.m */,
+				C94C65CB194A4C830071963E /* EventsTableViewCell.h */,
+				C94C65CC194A4C830071963E /* EventsTableViewCell.m */,
 				C94C653D193FB9F30071963E /* JGRootViewController.m */,
-				C99071AB193F9B9800C79961 /* Storyboard.storyboard */,
-				C94C65831940CC270071963E /* HomeViewController.h */,
-				C94C65841940CC270071963E /* HomeViewController.m */,
+				C94C65BF194A4C370071963E /* CalendarTableViewController.h */,
+				C94C65C0194A4C370071963E /* CalendarTableViewController.m */,
+				C94C65C2194A4C440071963E /* Storyboard.storyboard */,
+				C94C65C4194A4C550071963E /* HomeViewController.h */,
+				C94C65C5194A4C550071963E /* HomeViewController.m */,
 				C9DF9BA8193789FC0007C996 /* DateContactViewController.h */,
 				C9DF9BA9193789FC0007C996 /* DateContactViewController.m */,
-				C94C659D19475A4A0071963E /* EventsTableViewCell.h */,
-				C94C659E19475A4B0071963E /* EventsTableViewCell.m */,
-				C94C65A7194782B70071963E /* EventDetailViewController.h */,
-				C94C65A8194782B70071963E /* EventDetailViewController.m */,
-				C94C65AD1948B3A00071963E /* DateContactPickerTableViewController.h */,
-				C94C65AE1948B3A00071963E /* DateContactPickerTableViewController.m */,
 			);
 			name = Views;
 			path = ..;
@@ -188,12 +185,12 @@
 		C94C65A6194781E70071963E /* Event Detail Form */ = {
 			isa = PBXGroup;
 			children = (
-				C94C65A3194781CC0071963E /* RootForm.h */,
-				C94C65A4194781CC0071963E /* RootForm.m */,
-				C94C65A019477E6A0071963E /* EventDetailForm.h */,
-				C94C65A119477E6A0071963E /* EventDetailForm.m */,
-				C94C65AA19478D210071963E /* EventActivityForm.h */,
-				C94C65AB19478D210071963E /* EventActivityForm.m */,
+				C94C65D0194A4CB20071963E /* EventDetailForm.h */,
+				C94C65D1194A4CB20071963E /* EventDetailForm.m */,
+				C94C65D3194A4CC80071963E /* EventActivityForm.h */,
+				C94C65D4194A4CC80071963E /* EventActivityForm.m */,
+				C94C65D5194A4CC80071963E /* RootForm.h */,
+				C94C65D6194A4CC80071963E /* RootForm.m */,
 			);
 			name = "Event Detail Form";
 			sourceTree = "<group>";
@@ -201,13 +198,13 @@
 		C99071A4193E432000C79961 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				C94C65B3194A3F010071963E /* DateContact.h */,
-				C94C65B4194A3F010071963E /* DateContact.m */,
+				C94C65B9194A4C270071963E /* DateActivity.h */,
+				C94C65BA194A4C270071963E /* DateActivity.m */,
+				C94C65BB194A4C270071963E /* DateEvent.h */,
+				C94C65BC194A4C270071963E /* DateEvent.m */,
+				C94C65B6194A4C100071963E /* DateContact.h */,
+				C94C65B7194A4C100071963E /* DateContact.m */,
 				C9DF9B8319368E9D0007C996 /* SmashDate.xcdatamodeld */,
-				C94C6597194116F40071963E /* DateActivity.h */,
-				C94C6598194116F40071963E /* DateActivity.m */,
-				C94C6594194116F40071963E /* DateEvent.h */,
-				C94C6595194116F40071963E /* DateEvent.m */,
 			);
 			name = "Data Model";
 			path = ..;
@@ -248,8 +245,6 @@
 		C9DF9B7719368E9D0007C996 /* SmashDate */ = {
 			isa = PBXGroup;
 			children = (
-				C94C658B1941123A0071963E /* JGEventDataStore.h */,
-				C94C658C1941123A0071963E /* JGEventDataStore.m */,
 				01E6E575194229760038F076 /* images */,
 				C94C658A1941119E0071963E /* Forms */,
 				C99071A4193E432000C79961 /* Data Model */,
@@ -382,7 +377,7 @@
 				01E6E579194230FE0038F076 /* calendar-50.png in Resources */,
 				01E6E57719422A570038F076 /* date_from-50.png in Resources */,
 				C9DF9B8719368E9D0007C996 /* Images.xcassets in Resources */,
-				C99071AC193F9B9800C79961 /* Storyboard.storyboard in Resources */,
+				C94C65C3194A4C440071963E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,25 +396,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94C65D7194A4CC80071963E /* EventActivityForm.m in Sources */,
 				C9DF9B7E19368E9D0007C996 /* main.m in Sources */,
-				C94C65A219477E6A0071963E /* EventDetailForm.m in Sources */,
+				C94C65D2194A4CB20071963E /* EventDetailForm.m in Sources */,
 				C9DF9BAA193789FC0007C996 /* DateContactViewController.m in Sources */,
 				C9DF9BAD19378AE40007C996 /* DateContactForm.m in Sources */,
-				C94C658D1941123A0071963E /* JGEventDataStore.m in Sources */,
-				C94C65AC19478D210071963E /* EventActivityForm.m in Sources */,
+				C94C65C1194A4C370071963E /* CalendarTableViewController.m in Sources */,
+				C94C65CE194A4C830071963E /* EventDetailViewController.m in Sources */,
 				C9DF9BA7193787580007C996 /* FXForms.m in Sources */,
-				C94C65851940CC270071963E /* HomeViewController.m in Sources */,
-				C94C6596194116F40071963E /* DateEvent.m in Sources */,
-				C94C65B5194A3F010071963E /* DateContact.m in Sources */,
-				C94C659F19475A4B0071963E /* EventsTableViewCell.m in Sources */,
-				C94C659C194756890071963E /* CalendarTableViewController.m in Sources */,
+				C94C65D8194A4CC80071963E /* RootForm.m in Sources */,
+				C94C65CF194A4C830071963E /* EventsTableViewCell.m in Sources */,
+				C94C65B8194A4C100071963E /* DateContact.m in Sources */,
+				C94C65BD194A4C270071963E /* DateActivity.m in Sources */,
 				C9DF9B8519368E9D0007C996 /* SmashDate.xcdatamodeld in Sources */,
-				C94C6599194116F40071963E /* DateActivity.m in Sources */,
-				C94C65A5194781CC0071963E /* RootForm.m in Sources */,
+				C94C65BE194A4C270071963E /* DateEvent.m in Sources */,
 				C9DF9B8219368E9D0007C996 /* JGAppDelegate.m in Sources */,
-				C94C65AF1948B3A00071963E /* DateContactPickerTableViewController.m in Sources */,
 				C94C653E193FB9F30071963E /* JGRootViewController.m in Sources */,
-				C94C65A9194782B70071963E /* EventDetailViewController.m in Sources */,
+				C94C65CD194A4C830071963E /* DateContactPickerTableViewController.m in Sources */,
+				C94C65C6194A4C550071963E /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

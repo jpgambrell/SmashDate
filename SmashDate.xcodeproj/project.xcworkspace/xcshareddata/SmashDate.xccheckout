@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B0D15BE1-E074-4E71-B9D3-175C34ADE76D</string>
+	<string>4F2BD4A5-E477-448C-872C-95A090B6C6C9</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SmashDate</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>489F0F52-F63D-4666-B74C-2E92FB76E170</key>
-		<string>git://github.com/jpgambrell/smashdate.git</string>
+		<key>C9807492-5DC5-4A03-A8B6-1DAE4EE8A4E8</key>
+		<string>https://github.com/jpgambrell/SmashDate.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SmashDate.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>489F0F52-F63D-4666-B74C-2E92FB76E170</key>
+		<key>C9807492-5DC5-4A03-A8B6-1DAE4EE8A4E8</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>git://github.com/jpgambrell/smashdate.git</string>
+	<string>https://github.com/jpgambrell/SmashDate.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>489F0F52-F63D-4666-B74C-2E92FB76E170</string>
+	<string>C9807492-5DC5-4A03-A8B6-1DAE4EE8A4E8</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>489F0F52-F63D-4666-B74C-2E92FB76E170</string>
+			<string>C9807492-5DC5-4A03-A8B6-1DAE4EE8A4E8</string>
 			<key>IDESourceControlWCCName</key>
-			<string>smashdate</string>
+			<string>SmashDate</string>
 		</dict>
 	</array>
 </dict>
