@@ -9,6 +9,7 @@
 #import "DateContactPickerTableViewController.h"
 #import "JGAppDelegate.h"
 #import "DateContact.h"
+#import "DateContactViewController.h"
 
 @interface DateContactPickerTableViewController ()
 
@@ -34,8 +35,7 @@
     self.managedObjectContext = appDelegate.managedObjectContext;
     self.fetchedResultsController = nil;
     [self setupFetchController];
-    NSError *error;
-    [self.fetchedResultsController performFetch:&error];
+    
     
    
     // Uncomment the following line to preserve selection between presentations.
@@ -52,25 +52,26 @@
 }
 
 -(void) viewDidDisappear:(BOOL)animated{
-    self.fetchedResultsController = nil;
+   // self.fetchedResultsController = nil;
+    [NSFetchedResultsController deleteCacheWithName:@"FetchCache"];
+    
 }
-
--(void) viewWillAppear:(BOOL)animated{
-    if (!self.viewInsideNavController){
-        self.tableView.contentInset = UIEdgeInsetsMake(22, 0, 0, 0);
-    }
-        
+-(void)viewWillAppear:(BOOL)animated{
+    NSError *error;
+    
+    [self.fetchedResultsController performFetch:&error];
+    
 }
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//
-//    // Return the number of sections.
-//    return self.fetchedResultsController.sections.count;
-//    
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+
+    // Return the number of sections.
+    return self.fetchedResultsController.sections.count;
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -81,8 +82,10 @@
 }
 -(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *) indexPath{
     DateContact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = contact.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",contact.firstName, contact.lastName];
    
+    UIImage *image = [UIImage imageWithData:contact.avatar];
+    cell.imageView.image = image;
     
 }
 
@@ -95,7 +98,15 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [self.fetchedResultsController.sectionIndexTitles objectAtIndex:section];
+}
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return self.fetchedResultsController.sectionIndexTitles;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -160,14 +171,14 @@
     
     fetchRequest.entity = entity;
     
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:YES];
     
     fetchRequest.sortDescriptors = [NSArray arrayWithObject:sort];
     
     fetchRequest.fetchBatchSize = 20;
     
     NSFetchedResultsController *theFetchedRuquestController = [[NSFetchedResultsController alloc]
-                                                               initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"  ];
+                                                               initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"sectionTitle" cacheName:@"FetchCache"  ];
 
     
     self.fetchedResultsController = theFetchedRuquestController;

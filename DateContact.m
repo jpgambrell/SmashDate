@@ -2,7 +2,7 @@
 //  DateContact.m
 //  SmashDate
 //
-//  Created by Gambrell, John on 6/5/14.
+//  Created by Gambrell, John on 6/12/14.
 //  Copyright (c) 2014 Gambrell, John. All rights reserved.
 //
 
@@ -17,10 +17,13 @@
 @dynamic email;
 @dynamic facebook;
 @dynamic interests;
-@dynamic name;
+@dynamic lastName;
 @dynamic notes;
 @dynamic phone;
 @dynamic twitter;
+@dynamic avatar;
+@dynamic firstName;
+@dynamic sectionTitle;
 @dynamic dateEvent;
 
 @end

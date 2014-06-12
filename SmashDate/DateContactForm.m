@@ -16,7 +16,8 @@
 {
     return @[
              
-              @{FXFormFieldKey: @"name", FXFormFieldHeader: @"Details"},
+              @{FXFormFieldKey: @"firstName", FXFormFieldHeader: @"Details"},
+              @"lastName",
               @"avatar",
               @{FXFormFieldKey: @"address", FXFormFieldType: FXFormFieldTypeLongText},
               @"email",

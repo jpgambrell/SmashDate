@@ -11,5 +11,4 @@
 @interface DateContactPickerTableViewController : UITableViewController<NSFetchedResultsControllerDelegate>
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic) BOOL viewInsideNavController;
 @end

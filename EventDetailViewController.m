@@ -44,13 +44,11 @@
 -(void) pickContactsForEvent{
     
     NSLog(@"clicked to add contacts");
-    RootForm *rForm = self.formController.form;
+    //RootForm *rForm = self.formController.form;
   //  NSLog(@"activity name %@- date name %@",rForm.eventDetail.eventActivity.name, rForm.dateContact.name);
  //   [[self navigationController] performSegueWithIdentifier:@"contactpicker" sender:self];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     DateContactPickerTableViewController *contactPicker = (DateContactPickerTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"contactpicker"];
-    
-    contactPicker.viewInsideNavController = YES;
     [self.navigationController pushViewController:contactPicker animated:YES];
     
 }

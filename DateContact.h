@@ -2,7 +2,7 @@
 //  DateContact.h
 //  SmashDate
 //
-//  Created by Gambrell, John on 6/5/14.
+//  Created by Gambrell, John on 6/12/14.
 //  Copyright (c) 2014 Gambrell, John. All rights reserved.
 //
 
@@ -18,10 +18,13 @@
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * facebook;
 @property (nonatomic, retain) NSString * interests;
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * lastName;
 @property (nonatomic, retain) NSString * notes;
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * twitter;
+@property (nonatomic, retain) NSData * avatar;
+@property (nonatomic, retain) NSString * firstName;
+@property (nonatomic, retain) NSString * sectionTitle;
 @property (nonatomic, retain) NSSet *dateEvent;
 @end
 

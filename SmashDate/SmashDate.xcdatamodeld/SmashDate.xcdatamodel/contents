@@ -12,13 +12,16 @@
     </entity>
     <entity name="DateContact" representedClassName="DateContact" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="facebook" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="interests" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="dateEvent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateEvent" inverseName="dateContact" inverseEntity="DateEvent" syncable="YES"/>
     </entity>
@@ -32,7 +35,7 @@
     </entity>
     <elements>
         <element name="DateActivity" positionX="-65" positionY="63" width="128" height="163"/>
-        <element name="DateContact" positionX="-432" positionY="-9" width="128" height="193"/>
+        <element name="DateContact" positionX="-432" positionY="-9" width="128" height="238"/>
         <element name="DateEvent" positionX="-245" positionY="-22" width="128" height="133"/>
     </elements>
 </model>

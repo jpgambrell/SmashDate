@@ -72,9 +72,13 @@
     
     
     //now we can display a form value in our alert
-    DateContact *newDateContact = [NSEntityDescription insertNewObjectForEntityForName:@"DateContact" inManagedObjectContext:self.managedObjectContext];
+   // DateContact *newDateContact = [NSEntityDescription insertNewObjectForEntityForName:@"DateContact" inManagedObjectContext:self.managedObjectContext];
+   DateContact* newDateContact = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DateContact class]) inManagedObjectContext:self.managedObjectContext];
     
-    newDateContact.name = dcForm.name;
+    
+    newDateContact.sectionTitle = [[NSString stringWithString:dcForm.lastName] substringToIndex:1];
+    newDateContact.lastName = dcForm.lastName;
+    newDateContact.firstName = dcForm.firstName;
     newDateContact.birthday = dcForm.birthday;
     newDateContact.email = dcForm.email;
     newDateContact.facebook = dcForm.facebook;
@@ -83,6 +87,7 @@
     newDateContact.phone = dcForm.phone;
     newDateContact.twitter = dcForm.twitter;
     
+    newDateContact.avatar =  [NSData dataWithData:UIImagePNGRepresentation(dcForm.avatar)];
 
     
     NSError *anyError = nil;

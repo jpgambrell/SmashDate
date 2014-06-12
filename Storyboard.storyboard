@@ -22,7 +22,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="po9-eG-DcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976" y="-519"/>
+            <point key="canvasLocation" x="1465" y="-1110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QZL-xn-GYj">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="XDq-CV-NWo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="JfD-hI-u2d"/>
+                    <navigationItem key="navigationItem" id="T4C-6t-J6w"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O5J-67-00b">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Kda-jr-it9">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="upt-yC-WJk" kind="relationship" relationship="rootViewController" id="zjx-bn-dYZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7b-bM-vkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="-1329"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Kqo-OX-XNP">
@@ -57,7 +78,7 @@
                     <connections>
                         <segue destination="lPn-WI-aWe" kind="relationship" relationship="viewControllers" id="EJG-nd-d1K"/>
                         <segue destination="ktZ-Ki-OTv" kind="relationship" relationship="viewControllers" id="o7I-Gm-pfJ"/>
-                        <segue destination="upt-yC-WJk" kind="relationship" relationship="viewControllers" id="Og6-kE-Nc1"/>
+                        <segue destination="XDq-CV-NWo" kind="relationship" relationship="viewControllers" id="XUO-61-Vgz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp5-qN-arI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +226,6 @@
                             <outlet property="delegate" destination="upt-yC-WJk" id="G5D-Pg-BiC"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="JfD-hI-u2d"/>
                     <navigationItem key="navigationItem" id="CnW-aQ-e9R">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9aR-tL-S4X">
                             <connections>
@@ -216,7 +236,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQo-v2-CKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2457" y="-1093"/>
+            <point key="canvasLocation" x="1864" y="-1358"/>
         </scene>
         <!--Navigation Controller - Events-->
         <scene sceneID="MmY-4r-gTL">
@@ -246,6 +266,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="lHt-3w-wUF"/>
+        <segue reference="zjx-bn-dYZ"/>
     </inferredMetricsTieBreakers>
 </document>
