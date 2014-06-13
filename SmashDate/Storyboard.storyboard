@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="po9-eG-DcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465" y="-1110"/>
+            <point key="canvasLocation" x="2597" y="-738"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QZL-xn-GYj">
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQF-Wx-TW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="-427"/>
+            <point key="canvasLocation" x="764" y="-615"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rhn-KM-Gdq">
@@ -83,7 +83,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp5-qN-arI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="-100"/>
+            <point key="canvasLocation" x="-58" y="-136"/>
         </scene>
         <!--Calendar Table View Controller - Events Planned-->
         <scene sceneID="Y6m-R1-3gk">
@@ -144,6 +144,7 @@
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.61026664402173914" green="0.064520695904742478" blue="0.14408228629956393" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dayLabel" destination="wUH-JJ-qXU" id="yKV-UX-lhJ"/>
                                     <outlet property="dayofWeekLabel" destination="5Y3-Ql-ISw" id="3R4-GP-oVR"/>
@@ -170,7 +171,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtD-UG-AiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="208"/>
+            <point key="canvasLocation" x="1215" y="84"/>
         </scene>
         <!--Event Detail View Controller - New Event-->
         <scene sceneID="p7n-zy-sRD">
@@ -192,13 +193,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5u-ib-WDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="256"/>
+            <point key="canvasLocation" x="1649" y="84"/>
         </scene>
         <!--Date Contact Picker Table View Controller-->
         <scene sceneID="4ru-77-bMr">
             <objects>
                 <tableViewController storyboardIdentifier="contactpicker" id="upt-yC-WJk" customClass="DateContactPickerTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UAT-JW-bO8">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UAT-JW-bO8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,14 +230,17 @@
                     <navigationItem key="navigationItem" id="CnW-aQ-e9R">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9aR-tL-S4X">
                             <connections>
-                                <segue destination="PSt-0H-Eck" kind="push" id="bTd-oC-fC9"/>
+                                <action selector="addNewContactClick:" destination="upt-yC-WJk" id="aXa-6q-ly5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="PSt-0H-Eck" kind="push" identifier="DateContactVC" id="OcJ-dp-Boc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQo-v2-CKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="-1358"/>
+            <point key="canvasLocation" x="2136" y="-743"/>
         </scene>
         <!--Navigation Controller - Events-->
         <scene sceneID="MmY-4r-gTL">
@@ -254,7 +258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u83-w1-xnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="216"/>
+            <point key="canvasLocation" x="750" y="84"/>
         </scene>
     </scenes>
     <resources>
@@ -266,6 +270,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zjx-bn-dYZ"/>
+        <segue reference="lHt-3w-wUF"/>
     </inferredMetricsTieBreakers>
 </document>

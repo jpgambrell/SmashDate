@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+   
     JGAppDelegate *appDelegate = (JGAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
     self.fetchedResultsController = nil;
@@ -107,27 +107,36 @@
 {
     return self.fetchedResultsController.sectionIndexTitles;
 }
-/*
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+   
+    [self  performSegueWithIdentifier:@"DateContactVC" sender:self];
+}
+- (IBAction)addNewContactClick:(id)sender {
+    [self  performSegueWithIdentifier:@"DateContactVC" sender:sender];
+}
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.managedObjectContext deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+      //  [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -145,7 +154,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -153,8 +162,18 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+  //  DateContact * = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSLog(@"sender: %@", NSStringFromClass([sender class]));
+    
+    
+    if (![sender isKindOfClass:[UIBarButtonItem class]]) {
+        DateContactViewController *dVC = (DateContactViewController*)[segue destinationViewController];
+        dVC.existingContact = (DateContact*)[self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
+    }
+   
 }
-*/
+
 
 #pragma mark NSFetchController setup and delgate methods
 //-(NSFetchedResultsController *) fetchedResultsController{

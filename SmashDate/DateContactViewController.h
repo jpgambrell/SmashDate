@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FXForms.h"
+#import "DateContact.h"
 
 
 @interface DateContactViewController : FXFormViewController
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) DateContact *existingContact;
 
 @end

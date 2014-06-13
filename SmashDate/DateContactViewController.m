@@ -26,19 +26,55 @@
 //    }
 //    return self;
 //}
-
+- (void) setUpDateContactForm{
+    if (self.formController.form){
+        self.formController.form = nil;
+    }
+     self.formController.form = [[DateContactForm alloc]init];
+    [self.tableView reloadData];
+}
 
 - (id)initWithCoder:(NSCoder*)aDecoder
 {
     if(self = [super initWithCoder:aDecoder])
     {
         if (self) {
-            self.formController.form = [[DateContactForm alloc]init];
+            //self.formController.form = [[DateContactForm alloc]init];
+            [self setUpDateContactForm];
         }
     }
     return self;
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    
+    if (self.existingContact){
+        
+        DateContactForm *dcForm = self.formController.form;
+        
+        
+        //newDateContact.sectionTitle = [[NSString stringWithString:dcForm.lastName] substringToIndex:1];
+        dcForm.lastName = self.existingContact.lastName;
+        dcForm.firstName = self.existingContact.firstName;
+        dcForm.birthday = self.existingContact.birthday;
+        dcForm.email = self.existingContact.email;
+        dcForm.facebook = self.existingContact.facebook;
+        dcForm.address = self.existingContact.address;
+        //newDateContact.interests = [[dcForm.interests valueForKey:@"description"] componentsJoinedByString:@""];
+        dcForm.notes = self.existingContact.notes;
+        dcForm.phone = self.existingContact.phone;
+        dcForm.twitter = self.existingContact.twitter;
+        dcForm.avatar = [UIImage imageWithData:self.existingContact.avatar];
+       
+        
+    }
+    
+}
+
+-(void) viewDidDisappear:(BOOL)animated{
+    self.existingContact = nil;
+    
+}
 
 - (void)viewDidLoad
 {
@@ -64,31 +100,43 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 #pragma mark FXForms Methods
 - (void)submitLoginForm
 {
     DateContactForm * dcForm = self.formController.form;
-    
+    DateContact* modifiedDateContact;
+    BOOL isNewContact;
     
     
     //now we can display a form value in our alert
    // DateContact *newDateContact = [NSEntityDescription insertNewObjectForEntityForName:@"DateContact" inManagedObjectContext:self.managedObjectContext];
-   DateContact* newDateContact = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DateContact class]) inManagedObjectContext:self.managedObjectContext];
+   
+    if(self.existingContact){
+        modifiedDateContact = self.existingContact;
+        isNewContact = NO;
+    }
+    else{
+        modifiedDateContact = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DateContact class]) inManagedObjectContext:self.managedObjectContext];
+        isNewContact = YES;
+    }
+   // DateContact* newDateContact = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DateContact class]) inManagedObjectContext:self.managedObjectContext];
     
     
-    newDateContact.sectionTitle = [[NSString stringWithString:dcForm.lastName] substringToIndex:1];
-    newDateContact.lastName = dcForm.lastName;
-    newDateContact.firstName = dcForm.firstName;
-    newDateContact.birthday = dcForm.birthday;
-    newDateContact.email = dcForm.email;
-    newDateContact.facebook = dcForm.facebook;
-    newDateContact.interests = [[dcForm.interests valueForKey:@"description"] componentsJoinedByString:@""];
-    newDateContact.notes = dcForm.notes;
-    newDateContact.phone = dcForm.phone;
-    newDateContact.twitter = dcForm.twitter;
+    modifiedDateContact.sectionTitle = [[NSString stringWithString:dcForm.lastName] substringToIndex:1];
+    modifiedDateContact.lastName = dcForm.lastName;
+    modifiedDateContact.firstName = dcForm.firstName;
+    modifiedDateContact.address = dcForm.address;
+    modifiedDateContact.birthday = dcForm.birthday;
+    modifiedDateContact.email = dcForm.email;
+    modifiedDateContact.facebook = dcForm.facebook;
+    modifiedDateContact.interests = [[dcForm.interests valueForKey:@"description"] componentsJoinedByString:@""];
+    modifiedDateContact.notes = dcForm.notes;
+    modifiedDateContact.phone = dcForm.phone;
+    modifiedDateContact.twitter = dcForm.twitter;
     
-    newDateContact.avatar =  [NSData dataWithData:UIImagePNGRepresentation(dcForm.avatar)];
-
+    modifiedDateContact.avatar =  [NSData dataWithData:UIImagePNGRepresentation(dcForm.avatar)];
+  
     
     NSError *anyError = nil;
     BOOL savedSuccessfully = [self.managedObjectContext save:&anyError];
@@ -96,8 +144,16 @@
         NSLog(@"Error saving ");
     
     }   else {
-        [[[UIAlertView alloc] initWithTitle:@"Login Form Submitted" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];}
-
+        
+    if(isNewContact){
+        [[[UIAlertView alloc] initWithTitle:@"New Contact Saved." message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+        self.existingContact = modifiedDateContact;
     }
+    else{
+    [[[UIAlertView alloc] initWithTitle:@"Contact Updated." message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+    }
+    [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
+    }
+}
 
 @end
