@@ -33,11 +33,7 @@
    
     JGAppDelegate *appDelegate = (JGAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
-    self.fetchedResultsController = nil;
-    [self setupFetchController];
     
-    
-   
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -53,13 +49,13 @@
 
 -(void) viewDidDisappear:(BOOL)animated{
    // self.fetchedResultsController = nil;
-    [NSFetchedResultsController deleteCacheWithName:@"FetchCache"];
+   // [NSFetchedResultsController deleteCacheWithName:@"FetchCache"];
     
 }
 -(void)viewWillAppear:(BOOL)animated{
-    NSError *error;
+  //  NSError *error;
     
-    [self.fetchedResultsController performFetch:&error];
+   // [self.fetchedResultsController performFetch:&error];
     
 }
 
@@ -76,8 +72,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    id  sectionInfo =
-    [self.fetchedResultsController.sections objectAtIndex:section];
+    id  sectionInfo =[self.fetchedResultsController.sections objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 -(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *) indexPath{
@@ -85,7 +80,12 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",contact.firstName, contact.lastName];
    
     UIImage *image = [UIImage imageWithData:contact.avatar];
-    cell.imageView.image = image;
+    if (image){
+        cell.imageView.image = image;
+    }
+    else {
+        cell.imageView.image = [UIImage imageNamed:@"user_female3-75.png"];
+    }
     
 }
 
@@ -131,6 +131,14 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.managedObjectContext deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        
+        NSError *anyError;
+        BOOL savedSuccessfully = [self.managedObjectContext save:&anyError];
+        if( !savedSuccessfully ) { /* do something with anyError */
+            NSLog(@"Error saving ");
+            
+        }
+
       //  [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -163,11 +171,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-  //  DateContact * = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSLog(@"sender: %@", NSStringFromClass([sender class]));
-    
-    
-    if (![sender isKindOfClass:[UIBarButtonItem class]]) {
+    if ([sender isKindOfClass:[DateContactPickerTableViewController class]]) {
         DateContactViewController *dVC = (DateContactViewController*)[segue destinationViewController];
         dVC.existingContact = (DateContact*)[self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
     }
@@ -178,32 +182,37 @@
 #pragma mark NSFetchController setup and delgate methods
 //-(NSFetchedResultsController *) fetchedResultsController{
 
--(NSFetchedResultsController *) setupFetchController{
-
-
-    if (self.fetchedResultsController != nil){
-        return self.fetchedResultsController;
+//-(NSFetchedResultsController *) setupFetchController{
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil){
+        return _fetchedResultsController;
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"DateContact" inManagedObjectContext:self.managedObjectContext];
-    
     fetchRequest.entity = entity;
-    
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:YES];
-    
     fetchRequest.sortDescriptors = [NSArray arrayWithObject:sort];
-    
     fetchRequest.fetchBatchSize = 20;
     
     NSFetchedResultsController *theFetchedRuquestController = [[NSFetchedResultsController alloc]
-                                                               initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"sectionTitle" cacheName:@"FetchCache"  ];
+                                                               initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"sectionTitle" cacheName:@"FetchCache2"  ];
 
     
     self.fetchedResultsController = theFetchedRuquestController;
-
     self.fetchedResultsController.delegate = self;
-    return self.fetchedResultsController;
+    
+    NSError *error = nil;
+	if (![self.fetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    abort();
+	}
+    
+    
+    return _fetchedResultsController;
 
 }
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {

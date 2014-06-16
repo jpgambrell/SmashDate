@@ -2398,11 +2398,16 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
 
 - (void)layoutSubviews
 {
+//    CGRect frame = self.imagePickerView.bounds;
+//    frame.size.height = self.bounds.size.height - 10;
+//    frame.size.width =  self.bounds.size.height - 10;//self.imagePickerView.image? self.imagePickerView.image.size.width / frame.size.height: 0;
+//    self.imagePickerView.bounds = frame;
+    
     CGRect frame = self.imagePickerView.bounds;
     frame.size.height = self.bounds.size.height - 10;
-    frame.size.width = self.imagePickerView.image? self.imagePickerView.image.size.width / frame.size.height: 0;
+    UIImage *image = self.imagePickerView.image;
+    frame.size.width = image.size.height? image.size.width * (frame.size.height / image.size.height): 0;
     self.imagePickerView.bounds = frame;
-    
     [super layoutSubviews];
 }
 

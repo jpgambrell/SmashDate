@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DateContactPickerTableViewController : UITableViewController<NSFetchedResultsControllerDelegate>
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @end

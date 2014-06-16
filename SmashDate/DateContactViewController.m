@@ -52,8 +52,6 @@
         
         DateContactForm *dcForm = self.formController.form;
         
-        
-        //newDateContact.sectionTitle = [[NSString stringWithString:dcForm.lastName] substringToIndex:1];
         dcForm.lastName = self.existingContact.lastName;
         dcForm.firstName = self.existingContact.firstName;
         dcForm.birthday = self.existingContact.birthday;
@@ -64,8 +62,16 @@
         dcForm.notes = self.existingContact.notes;
         dcForm.phone = self.existingContact.phone;
         dcForm.twitter = self.existingContact.twitter;
-        dcForm.avatar = [UIImage imageWithData:self.existingContact.avatar];
+      //  dcForm.avatar = [UIImage imageWithData:self.existingContact.avatar];
        
+        UIImage *image = [UIImage imageWithData:self.existingContact.avatar];
+        if (image){
+            dcForm.avatar = image;
+        }
+        else {
+            dcForm.avatar = [UIImage imageNamed:@"user_female3-75.png"];
+        }
+
         
     }
     

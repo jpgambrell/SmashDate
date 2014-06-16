@@ -24,6 +24,8 @@
 		C94C65D2194A4CB20071963E /* EventDetailForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65D1194A4CB20071963E /* EventDetailForm.m */; };
 		C94C65D7194A4CC80071963E /* EventActivityForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65D4194A4CC80071963E /* EventActivityForm.m */; };
 		C94C65D8194A4CC80071963E /* RootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C65D6194A4CC80071963E /* RootForm.m */; };
+		C94C6626194F49900071963E /* user_female-75.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C6625194F49900071963E /* user_female-75.png */; };
+		C94C6628194F4AFE0071963E /* user_female3-75.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C6627194F4AFE0071963E /* user_female3-75.png */; };
 		C9DF9B7019368E9D0007C996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B6F19368E9D0007C996 /* Foundation.framework */; };
 		C9DF9B7219368E9D0007C996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */; };
 		C9DF9B7419368E9D0007C996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7319368E9D0007C996 /* UIKit.framework */; };
@@ -85,6 +87,8 @@
 		C94C65D4194A4CC80071963E /* EventActivityForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventActivityForm.m; path = SmashDate/EventActivityForm.m; sourceTree = "<group>"; };
 		C94C65D5194A4CC80071963E /* RootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootForm.h; path = SmashDate/RootForm.h; sourceTree = "<group>"; };
 		C94C65D6194A4CC80071963E /* RootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootForm.m; path = SmashDate/RootForm.m; sourceTree = "<group>"; };
+		C94C6625194F49900071963E /* user_female-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_female-75.png"; sourceTree = "<group>"; };
+		C94C6627194F4AFE0071963E /* user_female3-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_female3-75.png"; sourceTree = "<group>"; };
 		C9DF9B6C19368E9D0007C996 /* SmashDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DF9B6F19368E9D0007C996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +145,8 @@
 		01E6E575194229760038F076 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C94C6627194F4AFE0071963E /* user_female3-75.png */,
+				C94C6625194F49900071963E /* user_female-75.png */,
 				01E6E57619422A570038F076 /* date_from-50.png */,
 				01E6E578194230FE0038F076 /* calendar-50.png */,
 				01E6E5731942296D0038F076 /* date_from-75.png */,
@@ -374,9 +380,11 @@
 			files = (
 				C9DF9B7C19368E9D0007C996 /* InfoPlist.strings in Resources */,
 				01E6E5741942296D0038F076 /* date_from-75.png in Resources */,
+				C94C6628194F4AFE0071963E /* user_female3-75.png in Resources */,
 				01E6E579194230FE0038F076 /* calendar-50.png in Resources */,
 				01E6E57719422A570038F076 /* date_from-50.png in Resources */,
 				C9DF9B8719368E9D0007C996 /* Images.xcassets in Resources */,
+				C94C6626194F49900071963E /* user_female-75.png in Resources */,
 				C94C65C3194A4C440071963E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
