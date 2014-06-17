@@ -30,6 +30,7 @@
 		C94C662E194F73810071963E /* JGFxFormsSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C662D194F73810071963E /* JGFxFormsSubClass.m */; };
 		C94C6631194F905A0071963E /* UITextField+Multicast.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C6630194F905A0071963E /* UITextField+Multicast.m */; };
 		C94C6634194F90C90071963E /* SHCMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C6633194F90C90071963E /* SHCMulticastDelegate.m */; };
+		C94C66391950DDA10071963E /* DateContactFormTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C66381950DDA10071963E /* DateContactFormTableViewController.m */; };
 		C9DF9B7019368E9D0007C996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B6F19368E9D0007C996 /* Foundation.framework */; };
 		C9DF9B7219368E9D0007C996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */; };
 		C9DF9B7419368E9D0007C996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF9B7319368E9D0007C996 /* UIKit.framework */; };
@@ -101,6 +102,8 @@
 		C94C6630194F905A0071963E /* UITextField+Multicast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Multicast.m"; sourceTree = "<group>"; };
 		C94C6632194F90C90071963E /* SHCMulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCMulticastDelegate.h; sourceTree = "<group>"; };
 		C94C6633194F90C90071963E /* SHCMulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCMulticastDelegate.m; sourceTree = "<group>"; };
+		C94C66371950DDA10071963E /* DateContactFormTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateContactFormTableViewController.h; path = SmashDate/DateContactFormTableViewController.h; sourceTree = "<group>"; };
+		C94C66381950DDA10071963E /* DateContactFormTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateContactFormTableViewController.m; path = SmashDate/DateContactFormTableViewController.m; sourceTree = "<group>"; };
 		C9DF9B6C19368E9D0007C996 /* SmashDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DF9B6F19368E9D0007C996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9DF9B7119368E9D0007C996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +189,8 @@
 				C9DF9BA9193789FC0007C996 /* DateContactViewController.m */,
 				C94C6629194F60000071963E /* DateContactsTableViewCell.h */,
 				C94C662A194F60000071963E /* DateContactsTableViewCell.m */,
+				C94C66371950DDA10071963E /* DateContactFormTableViewController.h */,
+				C94C66381950DDA10071963E /* DateContactFormTableViewController.m */,
 			);
 			name = Views;
 			path = ..;
@@ -445,6 +450,7 @@
 				C9DF9B8219368E9D0007C996 /* JGAppDelegate.m in Sources */,
 				C94C653E193FB9F30071963E /* JGRootViewController.m in Sources */,
 				C94C65CD194A4C830071963E /* DateContactPickerTableViewController.m in Sources */,
+				C94C66391950DDA10071963E /* DateContactFormTableViewController.m in Sources */,
 				C94C65C6194A4C550071963E /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
