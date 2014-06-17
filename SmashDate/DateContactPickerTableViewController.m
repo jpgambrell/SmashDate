@@ -10,6 +10,7 @@
 #import "JGAppDelegate.h"
 #import "DateContact.h"
 #import "DateContactViewController.h"
+#import "DateContactsTableViewCell.h"
 
 @interface DateContactPickerTableViewController ()
 
@@ -75,23 +76,23 @@
     id  sectionInfo =[self.fetchedResultsController.sections objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
--(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *) indexPath{
+-(void) configureCell:(DateContactsTableViewCell *)cell atIndexPath:(NSIndexPath *) indexPath{
     DateContact *contact = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",contact.firstName, contact.lastName];
+    cell.nameTextLabel.text = [NSString stringWithFormat:@"%@ %@",contact.firstName, contact.lastName];
    
     UIImage *image = [UIImage imageWithData:contact.avatar];
     if (image){
-        cell.imageView.image = image;
+        cell.avatarImageView.image = image;
     }
     else {
-        cell.imageView.image = [UIImage imageNamed:@"user_female3-75.png"];
+        cell.avatarImageView.image = [UIImage imageNamed:@"user_female3-75.png"];
     }
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactPickerCell" forIndexPath:indexPath];
+    DateContactsTableViewCell *cell = (DateContactsTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"ContactPickerCell" forIndexPath:indexPath];
     
     // Configure the cell...
     [self configureCell:cell atIndexPath:indexPath];
@@ -174,6 +175,7 @@
     if ([sender isKindOfClass:[DateContactPickerTableViewController class]]) {
         DateContactViewController *dVC = (DateContactViewController*)[segue destinationViewController];
         dVC.existingContact = (DateContact*)[self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
+        
     }
    
 }
@@ -236,7 +238,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(DateContactsTableViewCell*)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:

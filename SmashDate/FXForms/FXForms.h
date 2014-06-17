@@ -33,6 +33,7 @@
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wobjc-missing-property-synthesis"
 #import <UIKit/UIKit.h>
+#import "UITextField+Multicast.h"
 
 
 #ifndef FXForms
@@ -127,6 +128,8 @@ static NSString *const FXFormFieldTypeImage = @"image";
 @property (nonatomic, strong) FXFormController *parentFormController;
 @property (nonatomic, weak) id<FXFormControllerDelegate> delegate;
 @property (nonatomic, strong) id<FXForm> form;
+//
+@property (nonatomic, strong) NSMutableDictionary *cellClassesForFieldTypes;
 
 - (NSUInteger)numberOfSections;
 - (NSUInteger)numberOfFieldsInSection:(NSUInteger)section;

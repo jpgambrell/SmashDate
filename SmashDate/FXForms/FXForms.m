@@ -371,7 +371,7 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
 @interface FXFormController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, copy) NSArray *sections;
-@property (nonatomic, strong) NSMutableDictionary *cellClassesForFieldTypes;
+//@property (nonatomic, strong) NSMutableDictionary *cellClassesForFieldTypes;
 @property (nonatomic, strong) NSMutableDictionary *controllerClassesForFieldTypes;
 
 - (void)performAction:(SEL)selector withSender:(id)sender;
@@ -403,6 +403,8 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
 
 + (NSArray *)fieldsWithForm:(id<FXForm>)form controller:(FXFormController *)formController
 {
+  
+    
     //get fields
     NSMutableArray *fields = [[form fields] mutableCopy];
     if (!fields)
@@ -492,6 +494,7 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
 
 - (instancetype)init
 {
+    
     //this class's contructor is private
     [self doesNotRecognizeSelector:_cmd];
     return nil;
@@ -508,6 +511,10 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
             [self setValue:value forKey:key];
         }];
     }
+    /////
+    
+    NSLog(@"what's the vc class? %@",[self.formController class]);
+    /////
     return self;
 }
 
@@ -1357,7 +1364,10 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
     FXFormField *field = [self fieldForIndexPath:indexPath];
 
     Class cellClass = field.cell ?: [self cellClassForFieldType:field.type];
+
+    
     NSString *nibName = NSStringFromClass(cellClass);
+
     if ([[NSBundle mainBundle] pathForResource:nibName ofType:@"nib"])
     {
         //load cell from nib
@@ -1805,7 +1815,13 @@ static BOOL *FXFormSetValueForKey(id<FXForm> form, id value, NSString *key)
     self.textField.font = [UIFont systemFontOfSize:self.textLabel.font.pointSize];
     self.textField.minimumFontSize = FXFormLabelMinFontSize(self.textLabel);
     self.textField.textColor = [UIColor colorWithRed:0.275f green:0.376f blue:0.522f alpha:1.000f];
-    self.textField.delegate = self;
+    /////
+    [self.textField.multicastDelegate addDelegate:self];
+    
+    
+   // self.textField.delegate = self;
+    /////
+
     [self.contentView addSubview:self.textField];
     
     [self.contentView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self.textField action:NSSelectorFromString(@"becomeFirstResponder")]];

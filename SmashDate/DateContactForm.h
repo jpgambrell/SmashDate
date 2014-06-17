@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FXForms.h"
+//#import "JGFxFormsSubClass.h"
 
 @interface DateContactForm : NSObject<FXForm>
 

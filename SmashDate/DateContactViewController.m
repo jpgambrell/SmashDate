@@ -10,6 +10,7 @@
 #import "DateContactForm.h"
 #import "DateContact.h"
 #import "JGAppDelegate.h"
+//#import "JGFxFormsSubClass.h"
 
 
 @interface DateContactViewController ()
@@ -27,11 +28,12 @@
 //    return self;
 //}
 - (void) setUpDateContactForm{
+    
     if (self.formController.form){
         self.formController.form = nil;
     }
      self.formController.form = [[DateContactForm alloc]init];
-    [self.tableView reloadData];
+  //  [self.tableView reloadData];
 }
 
 - (id)initWithCoder:(NSCoder*)aDecoder
@@ -41,16 +43,23 @@
         if (self) {
             //self.formController.form = [[DateContactForm alloc]init];
             [self setUpDateContactForm];
+            
+            
+            
+            
         }
     }
+   
+   
     return self;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
+     DateContactForm *dcForm = self.formController.form;
     
     if (self.existingContact){
         
-        DateContactForm *dcForm = self.formController.form;
+       
         
         dcForm.lastName = self.existingContact.lastName;
         dcForm.firstName = self.existingContact.firstName;
@@ -74,6 +83,12 @@
 
         
     }
+    else{
+        if (dcForm.avatar == nil){
+            dcForm.avatar = [UIImage imageNamed:@"user_female3-75.png"];
+        }
+    }
+    
     
 }
 
@@ -161,5 +176,7 @@
     [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
     }
 }
+
+
 
 @end

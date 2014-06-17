@@ -16,9 +16,9 @@
 {
     return @[
              
-              @{FXFormFieldKey: @"firstName", FXFormFieldHeader: @"Details"},
+              @{FXFormFieldKey: @"avatar", FXFormFieldHeader: @"Details"},
+              @"firstName",
               @"lastName",
-              @"avatar",
               @{FXFormFieldKey: @"address", FXFormFieldType: FXFormFieldTypeLongText},
               @"email",
               @"phone",
@@ -33,14 +33,11 @@
 
 
 
+//- (NSDictionary *)emailField
+//{
+//    return @{@"textLabel.color": [UIColor redColor]};
+//}
 
-
-
-/*- (NSDictionary *)emailField
-{
-    return @{@"textLabel.color": [UIColor redColor]};
-}
-*/
 //we're happy with the layout and properties of our login form, but we
 //want to add an additional button field at the end, so
 //we've used the extraFields method
