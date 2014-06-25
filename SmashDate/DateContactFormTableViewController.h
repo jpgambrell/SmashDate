@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DateContact.h"
 
 @interface DateContactFormTableViewController : UITableViewController
-
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) DateContact *existingContact;
 @end

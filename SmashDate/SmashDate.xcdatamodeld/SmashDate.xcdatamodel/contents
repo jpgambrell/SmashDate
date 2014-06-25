@@ -34,8 +34,8 @@
         <relationship name="dateContact" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateContact" inverseName="dateEvent" inverseEntity="DateContact" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DateActivity" positionX="-65" positionY="63" width="128" height="163"/>
-        <element name="DateContact" positionX="-432" positionY="-9" width="128" height="238"/>
-        <element name="DateEvent" positionX="-245" positionY="-22" width="128" height="133"/>
+        <element name="DateActivity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DateContact" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DateEvent" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
