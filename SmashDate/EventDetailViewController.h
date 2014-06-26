@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FXForms.h"
 
-@interface EventDetailViewController : FXFormViewController
+
+@interface EventDetailViewController : UIViewController
 
 @end

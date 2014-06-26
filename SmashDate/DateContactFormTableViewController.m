@@ -7,9 +7,11 @@
 //
 
 #import "DateContactFormTableViewController.h"
+#import "SelectAvatarViewController.h"
+#import "DateContact.h"
 #import "JGAppDelegate.h"
 
-@interface DateContactFormTableViewController ()<UITextFieldDelegate>
+@interface DateContactFormTableViewController ()<UITextFieldDelegate, SelectAvatarPhotoDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *firstName;
 @property (weak, nonatomic) IBOutlet UITextField *lastName;
 @property (weak, nonatomic) IBOutlet UITextField *address;
@@ -51,7 +53,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) viewDidAppear:(BOOL)animated{
+-(void) viewWillAppear:(BOOL)animated{
     if (self.existingContact){
 
         self.lastName.text = self.existingContact.lastName;
@@ -148,28 +150,34 @@
     return YES;
 }
 */
+-(void) avatarPhotoSelected:(NSData*)imageData {
+    //self.avatar.image = image;
+    self.existingContact.avatar = imageData;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    //super hack
-    if (indexPath.section == 1 && indexPath.row == 0){
-        NSLog(@"Photo Row Selected IndexPath: %i row %i", indexPath.section, indexPath.row);
-    }
 }
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+   // if ([sender isKindOfClass:[SelectAvatarViewController class]]) {
+        SelectAvatarViewController *aVC = (SelectAvatarViewController*) [segue destinationViewController];
+        
+        //aVC.existingContact = self.existingContact;//(DateContact*)[self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
+        aVC.avatarImageView.image = self.avatar.image;
+        aVC.delegate =self;
+    
+   // }
+
 }
-*/
+
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     

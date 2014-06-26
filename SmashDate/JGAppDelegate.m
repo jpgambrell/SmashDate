@@ -16,7 +16,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    //set up twitter access
+    self.accountStore = [[ACAccountStore alloc] init];
+    self.profileImages = [NSMutableDictionary dictionary];
+    ACAccountType *twitterType = [self.accountStore
+                                  accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    [self.accountStore requestAccessToAccountsWithType:twitterType options:nil completion:^(BOOL granted, NSError *error) {
+        if (granted)
+        {
+            NSArray *twitterAccounts =
+            [self.accountStore accountsWithAccountType:twitterType];
+            if ([twitterAccounts count])
+            {
+                self.userAccount = [twitterAccounts objectAtIndex:0];
+                [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"TwitterAccountAcquiredNotification" object:nil]]; }
+            else
+            {
+                NSLog(@"No Twitter Accounts");
+                
+            } }
+    }];
+
     return YES;
 }
 

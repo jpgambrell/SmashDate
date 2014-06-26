@@ -8,8 +8,8 @@
 
 #import "DateContactPickerTableViewController.h"
 #import "JGAppDelegate.h"
+#import "DateContactFormTableViewController.h"
 #import "DateContact.h"
-#import "DateContactViewController.h"
 #import "DateContactsTableViewCell.h"
 
 @interface DateContactPickerTableViewController ()
@@ -173,11 +173,9 @@
     // Pass the selected object to the new view controller.
     
     if ([sender isKindOfClass:[DateContactPickerTableViewController class]]) {
-        DateContactViewController *dVC = (DateContactViewController*)[segue destinationViewController];
+        DateContactFormTableViewController *dVC = (DateContactFormTableViewController*) [segue destinationViewController];
         dVC.existingContact = (DateContact*)[self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
-        
     }
-   
 }
 
 

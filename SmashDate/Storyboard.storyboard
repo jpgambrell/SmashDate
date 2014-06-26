@@ -4,30 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Date Contact View Controller - Contacts-->
-        <scene sceneID="0yZ-0K-j3X">
-            <objects>
-                <viewController title="Contacts" id="PSt-0H-Eck" customClass="DateContactViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dBo-jz-iIu"/>
-                        <viewControllerLayoutGuide type="bottom" id="Odd-hH-HOJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bwd-nf-wAG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="9Zb-jT-68H"/>
-                    <navigationItem key="navigationItem" id="KkS-jZ-2sS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="po9-eG-DcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2625" y="-170"/>
-        </scene>
-        <!--Date Contact Form Table View Controller-->
+        <!--Date Contact Form Table View Controller - Contact Details-->
         <scene sceneID="CnC-9t-HEW">
             <objects>
-                <tableViewController id="QRt-ZW-8yh" customClass="DateContactFormTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Contact Details" id="QRt-ZW-8yh" customClass="DateContactFormTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vz1-9W-ndj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,11 +145,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle=" " id="EEB-x7-Gdh" userLabel="Table View Section -">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aEs-3W-0vp">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aEs-3W-0vp">
                                         <rect key="frame" x="0.0" y="328" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEs-3W-0vp" id="DKK-91-NrH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT7-qU-swe">
@@ -185,6 +165,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="I3Z-Ny-dTN" kind="push" id="qhF-Cw-DNJ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fUO-s2-hvw">
                                         <rect key="frame" x="0.0" y="372" width="320" height="44"/>
@@ -291,7 +274,62 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNX-Cz-WWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3035" y="-743"/>
+            <point key="canvasLocation" x="2623" y="-738"/>
+        </scene>
+        <!--Select Avatar View Controller - Photo Selection-->
+        <scene sceneID="GJu-6F-ZIg">
+            <objects>
+                <viewController title="Photo Selection" id="I3Z-Ny-dTN" customClass="SelectAvatarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IHM-5Z-NIY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ddv-4D-BV6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A2a-Es-LP7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iz-gX-KUr">
+                                <rect key="frame" x="70" y="287" width="180" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select From Photo Library">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PhotoLibaryClick:" destination="I3Z-Ny-dTN" eventType="touchUpInside" id="wdb-Uo-cTk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user_female-75.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tll-DL-qes">
+                                <rect key="frame" x="73" y="112" width="175" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo selection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZf-Yn-0aj">
+                                <rect key="frame" x="40" y="83" width="198" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPt-0f-V6H">
+                                <rect key="frame" x="79" y="325" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Use Photo From Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPhotoFromTwitterClick:" destination="I3Z-Ny-dTN" eventType="touchUpInside" id="kLA-gv-lxF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3iw-L3-Rl5"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="Tll-DL-qes" id="pvW-nR-q46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Piq-2S-pnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3103" y="-738"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QZL-xn-GYj">
@@ -517,7 +555,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQo-v2-CKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2136" y="-743"/>
+            <point key="canvasLocation" x="2171" y="-738"/>
         </scene>
         <!--Navigation Controller - Events-->
         <scene sceneID="MmY-4r-gTL">
@@ -540,6 +578,7 @@
     </scenes>
     <resources>
         <image name="calendar-50.png" width="50" height="50"/>
+        <image name="user_female-75.png" width="75" height="75"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -7,8 +7,6 @@
 //
 
 #import "EventDetailViewController.h"
-#import "RootForm.h"
-#import "EventDetailForm.h"
 #import "DateContactPickerTableViewController.h"
 
 @interface EventDetailViewController ()
@@ -22,7 +20,7 @@
     if(self = [super initWithCoder:aDecoder])
     {
         if (self) {
-            self.formController.form = [[RootForm alloc]init];
+            
         }
     }
     return self;
