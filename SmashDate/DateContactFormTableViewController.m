@@ -19,11 +19,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
 @property (weak, nonatomic)  UITextField *selectedTextField;
+@property (nonatomic)  bool *needToSaveForm;
+
 - (IBAction)saveButtonClick:(id)sender;
 
 @end
 
 @implementation DateContactFormTableViewController
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -151,7 +154,7 @@
 }
 */
 -(void) avatarPhotoSelected:(NSData*)imageData {
-    //self.avatar.image = image;
+   // self.selectedAvatar = [UIImage imageWithData:imageData];
     self.existingContact.avatar = imageData;
 }
 

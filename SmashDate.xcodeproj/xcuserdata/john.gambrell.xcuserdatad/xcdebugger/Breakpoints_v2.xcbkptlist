@@ -408,22 +408,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425509899.363439"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-getTwitterUserProfile"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmashDate/SelectAvatarViewController.m"
             timestampString = "425509557.881154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -486,11 +470,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425509899.363439"
+            timestampString = "425854675.398067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-getTwitterUserProfile"
             landmarkType = "5">
          </BreakpointContent>
@@ -502,11 +486,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425509935.185885"
+            timestampString = "425853812.089639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-getTwitterUserProfile"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashDate/SelectAvatarViewController.m"
+            timestampString = "425854650.428216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-getTwitterUserProfile"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashDate/SelectAvatarViewController.m"
+            timestampString = "425856032.75678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-getTwitterUserProfile"
             landmarkType = "5">
          </BreakpointContent>
