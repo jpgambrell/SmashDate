@@ -11,6 +11,7 @@
 #import "JGAppDelegate.h"
 
 @interface SelectAvatarViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 - (IBAction)selectPhotoFromTwitterClick:(id)sender;
 
 @end
@@ -38,7 +39,7 @@
     
     NSURL *feedURL = [NSURL URLWithString:@"https://api.twitter.com/1.1/users/show.json"];
     
-    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"P1sideroom", @"screen_name", nil];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:self.contactTwitter, @"screen_name", nil];
     SLRequest *twitterFeed =
     [SLRequest requestForServiceType:SLServiceTypeTwitter
                        requestMethod:SLRequestMethodGET
@@ -59,17 +60,14 @@
             
             
             if (!jsonError) {
-              //  NSArray *tweetArr = (NSArray*)feedData;
-               
-                NSDictionary *tweetDict = (NSDictionary*)feedData;
-             //   [tweetDict valueForKeyPath:@"user.profile_image_url"];
+                             NSDictionary *tweetDict = (NSDictionary*)feedData;
+            
                 NSString *imgURL = (NSString*)[tweetDict valueForKeyPath:@"profile_image_url"];
                 imgURL = [imgURL stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
                 NSLog(@"Twitter return: %@", imgURL);
-//                // Send a synchronous request
+//
                 NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:imgURL]];
-              //  NSURLResponse * response = nil;
-              //  NSError * error = nil;
+             
                [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                     if (connectionError == nil)
                     {
@@ -79,6 +77,9 @@
                     }
                     else{
                         NSLog(@"error loading twitter image");
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to get Image from Twitter" delegate:nil
+                                                                  cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        [alertView show];
                     }
                 }];
              
@@ -108,6 +109,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+}
+-(void) viewWillAppear:(BOOL)animated   {
+    self.avatarImageView.image = self.avImage;
 }
 
 - (void)didReceiveMemoryWarning

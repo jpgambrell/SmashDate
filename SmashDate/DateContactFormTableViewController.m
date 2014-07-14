@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
 @property (weak, nonatomic)  UITextField *selectedTextField;
+@property (weak, nonatomic) IBOutlet UITextField *twitter;
+@property (weak, nonatomic) IBOutlet UITextField *facebook;
 @property (nonatomic)  bool *needToSaveForm;
 
 - (IBAction)saveButtonClick:(id)sender;
@@ -63,13 +65,13 @@
         self.firstName.text = self.existingContact.firstName;
       //  self.birthday.text = self.existingContact.birthday;
         self.email.text = self.existingContact.email;
-     //   self.facebook.text = self.existingContact.facebook;
+        self.facebook.text = self.existingContact.facebook;
         self.address.text = self.existingContact.address;
         //newDateContact.interests = [[dcForm.interests valueForKey:@"description"] componentsJoinedByString:@""];
     //    self.notes.text = self.existingContact.notes;
     //    self.phone.text = self.existingContact.phone;
-    //    self.twitter.text = self.existingContact.twitter;
-        //  dcForm.avatar = [UIImage imageWithData:self.existingContact.avatar];
+        self.twitter.text = self.existingContact.twitter;
+
         
         UIImage *image = [UIImage imageWithData:self.existingContact.avatar];
         if (image){
@@ -154,7 +156,6 @@
 }
 */
 -(void) avatarPhotoSelected:(NSData*)imageData {
-   // self.selectedAvatar = [UIImage imageWithData:imageData];
     self.existingContact.avatar = imageData;
 }
 
@@ -174,7 +175,8 @@
         SelectAvatarViewController *aVC = (SelectAvatarViewController*) [segue destinationViewController];
         
         //aVC.existingContact = self.existingContact;//(DateContact*)[self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
-        aVC.avatarImageView.image = self.avatar.image;
+        aVC.avImage = self.avatar.image;
+        aVC.contactTwitter = self.twitter.text;
         aVC.delegate =self;
     
    // }
@@ -244,11 +246,11 @@
     modifiedDateContact.address = self.address.text;
   //  modifiedDateContact.birthday = dcForm.birthday;
     modifiedDateContact.email = self.email.text;
-   // modifiedDateContact.facebook = dcForm.facebook;
+    modifiedDateContact.facebook = self.facebook.text;
    // modifiedDateContact.interests = [[dcForm.interests valueForKey:@"description"] componentsJoinedByString:@""];
     //modifiedDateContact.notes = dcForm.notes;
     modifiedDateContact.phone = self.phone.text;
-   // modifiedDateContact.twitter = dcForm.twitter;
+   modifiedDateContact.twitter = self.twitter.text;
     
     modifiedDateContact.avatar =  [NSData dataWithData:UIImagePNGRepresentation(self.avatar.image)];
     

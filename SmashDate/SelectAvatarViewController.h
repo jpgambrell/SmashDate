@@ -14,6 +14,8 @@
     
 
 @interface SelectAvatarViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+
+@property (nonatomic, retain) NSString *contactTwitter;
 @property(nonatomic,assign)id delegate;
+@property (nonatomic, weak) UIImage *avImage;
 @end

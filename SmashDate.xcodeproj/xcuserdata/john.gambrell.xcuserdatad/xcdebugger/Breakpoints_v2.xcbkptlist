@@ -296,11 +296,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/DateContactFormTableViewController.m"
-            timestampString = "425505898.459291"
+            timestampString = "427058434.057902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "@implementation DateContactFormTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashDate/DateContactFormTableViewController.m"
+            timestampString = "427058434.057902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "@implementation DateContactFormTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashDate/DateContactFormTableViewController.m"
+            timestampString = "427058434.057902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "-textFieldDidBeginEditing:"
             landmarkType = "5">
          </BreakpointContent>
@@ -312,45 +344,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/DateContactFormTableViewController.m"
-            timestampString = "425505898.459291"
+            timestampString = "427058434.057902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "-textFieldShouldReturn:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmashDate/DateContactFormTableViewController.m"
-            timestampString = "425505898.459291"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "-textFieldDidEndEditing:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmashDate/DateContactFormTableViewController.m"
-            timestampString = "425505898.459291"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "-scrollViewWillBeginDragging:"
-            landmarkType = "5">
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "@implementation DateContactFormTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -376,13 +376,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/DateContactFormTableViewController.m"
-            timestampString = "425505898.459291"
+            timestampString = "427058434.057902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "@implementation DateContactFormTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -392,13 +392,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/DateContactFormTableViewController.m"
-            timestampString = "425505898.459291"
+            timestampString = "427055935.81421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "-avatarPhotoSelected:"
-            landmarkType = "5">
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "@implementation DateContactFormTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -408,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425509557.881154"
+            timestampString = "427057213.973967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-getTwitterUserProfile"
             landmarkType = "5">
             <Locations>
@@ -454,11 +454,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425509582.365185"
+            timestampString = "427057213.973967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-getTwitterUserProfile"
             landmarkType = "5">
          </BreakpointContent>
@@ -470,11 +470,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425854675.398067"
+            timestampString = "427057213.973967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "-getTwitterUserProfile"
             landmarkType = "5">
          </BreakpointContent>
@@ -486,11 +486,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425853812.089639"
+            timestampString = "427057213.973967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-getTwitterUserProfile"
             landmarkType = "5">
          </BreakpointContent>
@@ -502,11 +502,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425854650.428216"
+            timestampString = "427057213.973967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-getTwitterUserProfile"
             landmarkType = "5">
          </BreakpointContent>
@@ -518,12 +518,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashDate/SelectAvatarViewController.m"
-            timestampString = "425856032.75678"
+            timestampString = "427057213.973967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-getTwitterUserProfile"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashDate/DateContactFormTableViewController.m"
+            timestampString = "427058434.057902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "-saveButtonClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashDate/JGAppDelegate.m"
+            timestampString = "427059253.867988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-applicationWillEnterForeground:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashDate/JGAppDelegate.m"
+            timestampString = "427058681.598049"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

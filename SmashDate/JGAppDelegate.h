@@ -18,7 +18,6 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (strong, nonatomic) ACAccountStore *accountStore;
-@property (strong, nonatomic) NSMutableDictionary *profileImages;
 @property (strong, nonatomic) ACAccount *userAccount;
 
 - (void)saveContext;

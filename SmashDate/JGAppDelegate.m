@@ -16,27 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //set up twitter access
-    self.accountStore = [[ACAccountStore alloc] init];
-    self.profileImages = [NSMutableDictionary dictionary];
-    ACAccountType *twitterType = [self.accountStore
-                                  accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    [self.accountStore requestAccessToAccountsWithType:twitterType options:nil completion:^(BOOL granted, NSError *error) {
-        if (granted)
-        {
-            NSArray *twitterAccounts =
-            [self.accountStore accountsWithAccountType:twitterType];
-            if ([twitterAccounts count])
-            {
-                self.userAccount = [twitterAccounts objectAtIndex:0];
-                [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"TwitterAccountAcquiredNotification" object:nil]]; }
-            else
-            {
-                NSLog(@"No Twitter Accounts");
-                
-            } }
-    }];
-
+    [self setUpTwitterAccount];
     return YES;
 }
 
@@ -55,17 +35,44 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if (!self.userAccount.accountDescription){
+        [self setUpTwitterAccount];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+-(void) setUpTwitterAccount{
+    //set up twitter access
+    self.accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *twitterType = [self.accountStore
+                                  accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    [self.accountStore requestAccessToAccountsWithType:twitterType options:nil completion:^(BOOL granted, NSError *error) {
+        if (granted)
+        {
+            NSArray *twitterAccounts =
+            [self.accountStore accountsWithAccountType:twitterType];
+            if ([twitterAccounts count])
+            {
+                self.userAccount = [twitterAccounts objectAtIndex:0];
+                [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"TwitterAccountAcquiredNotification" object:nil]]; }
+            else
+            {
+                NSLog(@"No Twitter Accounts");
+                
+            } }
+    }];
+    
 }
 
 - (void)saveContext
