@@ -35,11 +35,6 @@
     JGAppDelegate *appDelegate = (JGAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,15 +43,9 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) viewDidDisappear:(BOOL)animated{
-   // self.fetchedResultsController = nil;
-   // [NSFetchedResultsController deleteCacheWithName:@"FetchCache"];
-    
-}
+
 -(void)viewWillAppear:(BOOL)animated{
-  //  NSError *error;
-    
-   // [self.fetchedResultsController performFetch:&error];
+
     
 }
 
@@ -180,7 +169,6 @@
 
 
 #pragma mark NSFetchController setup and delgate methods
-//-(NSFetchedResultsController *) fetchedResultsController{
 
 //-(NSFetchedResultsController *) setupFetchController{
 - (NSFetchedResultsController *)fetchedResultsController
@@ -205,9 +193,7 @@
     
     NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
     
